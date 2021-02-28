@@ -3,1269 +3,1436 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>The Mansion of Mysteries</title>
+<title>The Museum of Mazes </title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:0.1em}0%,to{top:0px}}@keyframes shudder{25%{left:0.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:0.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:0.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%, to{transform:translateX(0em)}5%, 25%, 45%{transform:translateX(-1em)}15%, 35%, 55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%, to{transform:translateY(0em)}5%, 25%, 45%{transform:translateY(-1em)}15%, 35%, 55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%, 8.1%, 82.1%, 31.1%, 38.1%, 44.1%, 40.1%, 47.1%, 74.1%, 16.1%, 27.1%, 72.1%, 24.1%, 95.1%, 6.1%, 36.1%, 20.1%, 4.1%, 91.1%, 14.1%, 87.1%, to{left:0px;top:0px}8%, 82%, 31%, 38%, 44%{left:-1px}40%, 47%, 74%, 16%, 27%{left:1px}72%, 24%, 95%, 6%, 36%{top:-1px}20%, 4%, 91%, 14%, 87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:0.2}64%{opacity:0.4}78%{opacity:0.6}87%{opacity:0.8}92%, to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:black;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" title="' attr(title) '">'}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,0.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,0.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,0.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,0.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,0.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,0.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,0.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,0.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,0.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,0.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,0.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,0.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,0.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,0.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 0.5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,0.5)}.debug-mode tw-hook{background-color:rgba(0,85,255,0.1) !important}.debug-mode tw-hook::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,0.1) !important}.debug-mode tw-collapsed::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 50%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, rgba(255,204,189,0.25) 0%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,0.2)}.debug-mode tw-enchantment{animation:enchantment 0.5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,0.1)}.debug-mode tw-include::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(type) ' "' attr(title) '"'}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:10em;min-height:1em;padding:0em 0.5em 0.5em 1em;font-size:1.25em;font-family:sans-serif;color:#000;border-left:solid #000 2px;border-top:solid #000 2px;border-top-left-radius:.5em;background:#fff;opacity:1}tw-debugger select{margin-right:1em;width:12em}tw-debugger button{border-radius:3px;border:solid #999 1px;margin:auto 4px;background-color:#fff;font-size:inherit;color:#000}tw-debugger button.enabled{background-color:#eee;box-shadow:inset #ddd 3px 5px 0.5em}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;max-height:40vh;overflow-y:scroll;overflow-x:hidden;z-index:999998;background:#fff;border:inherit;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:0.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger .panel-source,tw-debugger .panel-row-source{font-family:monospace;overflow-x:scroll;white-space:pre;-ms-flex-preferred-size:100%;flex-basis:100%}tw-debugger .panel-row-source{margin:5px 0}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background:#EEE}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:0.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:0.8;font-size:0.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#444;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,0.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,0.3)}tw-debugger .error-row>*{display:table-cell;padding:0.25em 0.5em}tw-debugger .error-row .error-message{cursor:help}tw-debugger .error-row .error-passage{color:#444}tw-debugger .storylet-row{background-color:rgba(201,233,222,0.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(128,203,178,0.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;opacity:0.4;background-color:rgba(217,217,217,0.3)}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:rgba(166,166,166,0.3)}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,0.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,0.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .tabs{padding-bottom:0.5em}tw-debugger .tab{border-radius:0px 0px 0.5em 0.5em;border-top:none}tw-debugger .resizer{position:absolute;height:3em;border-left:2px solid #ccc;border-right:2px solid #ccc;top:10px;left:4px;width:8px;cursor:ew-resize}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media (min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop ~ tw-backdrop{display:none}tw-link,.link,tw-icon,.enchantment-clickblock{cursor:pointer}tw-link,.enchantment-link{color:#4169E1;font-weight:bold;text-decoration:none;transition:color 0.2s ease-in-out}tw-passage [style^="color"] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^="color"][hover="true"] tw-link:hover,tw-passage [style*=" color"][hover="true"] tw-link:hover,tw-passage [style^="color"] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^="color"][hover="true"] .enchantment-link:hover,tw-passage [style*=" color"][hover="true"] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#DD4B39}.visited{color:#6941e1}tw-passage [style^="color"] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^="color"][hover="true"] .visited:hover,tw-passage [style*=" color"][hover="true"] .visited:hover{color:inherit}.visited:hover{color:#E3E}tw-broken-link{color:#993333;border-bottom:2px solid #993333;cursor:not-allowed}tw-passage [style^="color"] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^="color"][hover="true"] tw-broken-link:hover,tw-passage [style*=" color"][hover="true"] tw-broken-link:hover{color:inherit}.enchantment-mouseover{border-bottom:2px dashed #999}.enchantment-mouseout{border:rgba(64,149,191,0.6) 1px solid}.enchantment-mouseout:hover{background-color:rgba(175,197,207,0.75);border:transparent 1px solid;border-radius:0.2em}.enchantment-clickblock{width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,0.5);transition:color 0.2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,0.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,0.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 0.5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 0.5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,0.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,0.75);border:transparent 2px solid;border-radius:0.2em}tw-link.enchantment-button,.enchantment-link.enchantment-button,.enchantment-button:not(.enchantment-link) tw-link,.enchantment-button:not(.enchantment-link) .enchantment-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia, serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media (min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:transparent;font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:transparent;font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 0.5em}tw-story tw-noscript{animation:appear 0.8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media (min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}}tw-icon{display:inline-block;margin:0.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:0.2}tw-icon[alt]:hover{opacity:0.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:0.2em;padding:0.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,0.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,0.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:0.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:1px;border:1px solid black;font-size:0.8rem;margin:0 0.4rem;padding:2px;white-space:pre}tw-folddown::after{content:"\25b6"}tw-folddown.open::after{content:"\25bc"}tw-open-button::after{content:"Open"}tw-notifier{border-radius:0.2em;padding:0.2em;font-size:1rem;background-color:rgba(223,182,58,0.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid black;display:inline-block;width:1em;height:1em}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:0.3em 0 0.6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,0.6);background-color:#ff9}ins{color:rgba(0,0,0,0.6);background-color:rgba(255,242,204,0.5);border-radius:0.5em;box-shadow:0em 0em 0.2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The Mansion of Mysteries.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The Mansion of Mysteries" startnode="1" creator="Twine" creator-version="2.3.13" ifid="5241FD9A-B653-41C7-9126-B16EE737826C" zoom="0.25" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Welcome to the Mansion of Mysteries" tags="" position="742,294" size="100,100">On a (link-reveal:&quot;cold winter night,&quot;)[ an emergency call reports a crime at the (link-reveal:&quot;Mansion of Mysteries.&quot;)[ 
-Jewellery and paintings have (link-reveal:&quot;vanished.&quot;)[ 
-There are footprints in the hall, but no sign of the burglars entering or leaving. The police are baffled and have asked you to solve the mystery. 
-Are your detective skills up to the challenge(link-reveal:&quot;?&quot;)[
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The Museum of Mazes .</tw-noscript></noscript></tw-story>
+<tw-storydata name="The Museum of Mazes " startnode="1" creator="Twine" creator-version="2.3.13" ifid="339CF83F-B7B4-4545-B024-9B9A2D258D47" zoom="0.25" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="1588,70" size="100,100">In the (link-reveal:&quot;middle of the night,&quot;)[ 
+you were woken by the sound of a letter dropping through your (link-reveal:&quot;letter box...&quot;)[
 
-When you arrive at the Mansion of Mysteries, the moon is full. 
-An owl (cycling-link:&quot;hoots&quot;,&quot;screeches&quot;,&quot;flys overhead&quot;,&quot;looks at you from a nearby tree ominously&quot;).
-(link-reveal:&quot;You&quot;)[(t8n: &quot;shudder&quot;)[ shiver ](link-reveal:&quot;and&quot;)[ the door swings open.
-You (link-reveal:&quot;step inside.&quot;)[
-First, you must find the clues in the rooms and corridors. 
-Shapes and patterns point the way. 
-The clues will reveal the secret behind a cunning crime.
+*Burglars are trying to steal the Golden Hoard at the Museum of Mazes. 
+Come quickly - there isn&#39;t much time!*
+
+Now you are at the Museum and are (link-reveal:&quot;locked inside.&quot;)[ 
+
+But you&#39;re (link-reveal:&quot;not alone&quot;)[ 
+something is lurking in the shadows. 
+
+You must solve the clues before the Golden Hoard, 
+(link-reveal:&quot;the greatest treasure of ancient times, &quot;)[
+is stolen forever! 
+
+First you must collect the mystery objects, then use them to solve the final puzzle. You will need nerves of steel!
 
 During your adventure make sure to take notes of important things, especially the four code words.
 
-If you are ready for the challenge click [[here-&gt;pg28gem]].
-If you are still not sure click [[here-&gt;pg32footprint]].]]]]]]]</tw-passagedata><tw-passagedata pid="2" name="pg28gem" tags="" position="664,442" size="100,100">You are in the (link-reveal:&quot;Grand Hall. &quot;)[
-There is a small table in front of you. 
-On it is (link-reveal:&quot;a letter addressed to you!&quot;)[
+If you are ready for the challenge, click [[here-&gt;pg17knight1st]].
+If you are still not sure click [[here-&gt;pg15coins]].]]]]]
+</tw-passagedata><tw-passagedata pid="2" name="pg17knight" tags="" position="1699,342" size="100,100">You are standing in the main entrance hall.
 
-*Dear Detective,
-I need your help to catch the burglars. You must find the clues that will trap them. I have left notes to help you. First try to find the stolen items. But take care - the burglars have set traps for you!
-Your Friend*
+Four corridors lead in different directions.
+You must choose which one to take.
 
-(link-reveal:&quot;You look around&quot;)[ and see shapes on the walls where priceless paintings once hung
+Which part of the Museum will you visit now?
+
+(text-colour:black)+(background:purple)[[[Greeks and Romans-&gt;pg26knight]]]
+
+(text-colour:black)+(background:red)[[[Vikings-&gt;pg34wing]]]
+
+(text-colour:black)+(background:blue)[[[Middle Ages-&gt;pg28knight]]]
+
+(text-colour:black)+(background:yellow)[[[Golden Hoard-&gt;pg20knight]]]
+</tw-passagedata><tw-passagedata pid="3" name="pg15coins" tags="" position="1759,74" size="100,100">Don&#39;t be afraid.
+It&#39;s a challenging adventure, but help is nearby.
+When you get stuck, a mysterious friend will guide you. Just follow the instructions one at a time, and see how far you get.
+Now, get on your way to the [[entrance hall-&gt;pg17knight]].
+Good luck.
+</tw-passagedata><tw-passagedata pid="4" name="pg26knight" tags="" position="1073,368" size="100,100">You follow the sign to the (text-colour:black)+(background:purple)[Greek and Roman] galleries. 
+
+You (link-reveal:&quot;pause for a moment...&quot;)[
+...are those soft footsteps (link-reveal:&quot;following you? &quot;)[
+For some reason you [[don&#39;t feel afraid-&gt;pg10wing]].]]</tw-passagedata><tw-passagedata pid="5" name="pg34wing" tags="" position="2599,453.3333333333335" size="100,100">You walk along the corridor towards the (text-colour:black)+(background:red)[Viking&#39;s gallery]. 
+Someone has left a dish of milk near a pillar. 
+You hear a purring sound and glimpse the tip of (link-reveal:&quot;a tail.&quot;)[
+
+Ahead you see a Viking ship.
+It is surrounded by displays of swords, axes, horned helmets and jewellery, dug from a (link-reveal:&quot;burial mound. &quot;)[
+
+A trail of milky paw prints leads you to a glass box.
+Inside the box there is a (link-reveal:&quot;human skeleton.&quot;)[
+
+It is the Viking chief.
+
+A card of the display gives a (link-reveal:&quot;chilling message...&quot;)[
+
+*The amulet you must seek,
+Was hidden beneath this Viking&#39;s seat,
+But be careful in your quest,
+The Viking curse won&#39;t let you rest!
+The chieftain&#39;s axe is what you need,
+The heaviest of all will succeed.*
+
+A cold wind whistles through the galleries and [[ruffles the ship&#39;s sails-&gt;pg32wing]]...]]]]</tw-passagedata><tw-passagedata pid="6" name="pg28knight" tags="" position="1647,675" size="100,100">You follow the sign to the exhibits of the (text-colour:black)+(background:blue)[Middle Ages].
+
+You see suits of armour lining the walls and shields with coats of arms on display.
+
+At any moment you expect a king and his courtiers to walk in a procession along the corridor.
+
+Wait a moment - (link-reveal:&quot;what&#39;s that?&quot;)[ 
+
+Are those (text-colour:green)[eyes] shining out at you from the [[darkness-&gt;pg7bird]]?]
+</tw-passagedata><tw-passagedata pid="7" name="pg20knight" tags="" position="3672.6666666666665,292.3333333333335" size="100,100">You follow the footprints along the (link-reveal:&quot;corridor.&quot;)[
+
+You come to a locked iron gate and (link-reveal:&quot;can&#39;t go any further.&quot;)[
+
+But look - there&#39;s a brass plate on the gate that has an (link-reveal:&quot;inscription...&quot;)[
+
+*To unlock this gate, you need a Roman key.*
+
+[[I have the iron key-&gt;pg27wing]].
+[[I don&#39;t have the iron key yet-&gt;pg17knight]].
+
+(Hint - Visit the [[Greeks and Romans-&gt;pg17knight]] section of the Museum.)]]]</tw-passagedata><tw-passagedata pid="8" name="pg10wing" tags="" position="1072,518" size="100,100">The galleries are (link-reveal:&quot;dark and eeire. &quot;)[
+
+A (t8n:&quot;pulse&quot;)+(text-colour:red)[red light] flashing inside a display case attracts your (link-reveal:&quot;attention. &quot;)[
+
+You see two vases inside the case. 
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg10wing.png&quot;&gt;
+
+
+They are numbered 24 and 25, and someone has taped a card to the (link-reveal:&quot;display...&quot;)[
+
+*Choose a vase if you dare,
+Five times five holds the clue,
+But be sure you choose with care,
+If you&#39;re wrong, it&#39;s the end for you!*
+
+You chose [[vase 24-&gt;pg26vase]].
+You chose [[vase 25-&gt;pg27coins]].]]]
+</tw-passagedata><tw-passagedata pid="9" name="pg26vase" tags="" position="964,665" size="100,100">You put your hand in the (link-reveal:&quot;vase.&quot;)[
+(t8n: &quot;slide-right&quot;)[Something hairy] (link-reveal:&quot;crawls&quot;)[ over your fingers!
+(link-reveal:&quot;You snatch you hand away.&quot;)[
+
+A giant tarantula climbs out of the vase. 
+
+You were lucky (link-reveal:&quot;it didn&#39;t bite you!&quot;)[
+
+You chose the wrong vase: [[&#39;five times five&#39; is 25-&gt;pg10wing2nd]], not 24.]]]]
+</tw-passagedata><tw-passagedata pid="10" name="pg27coins" tags="" position="1147,668" size="100,100">You put your hand in the vase and (link-reveal:&quot;feel around. &quot;)[
+
+(link-reveal:&quot;It&#39;s the right vase!&quot;)[
+
+You find six clay discs and a slip of paper with some instructions.
 
 &lt;img 
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg28gem.png&quot;&gt;
- - now they have been stolen. 
- 
-***You make a note of the shapes in your notebook.*** 
-(link-reveal:&quot;They might be important!&quot;)[
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg27coins.png&quot;&gt;
 
-(t8n: &quot;pulse&quot;)[Have you written the correct shapes &quot;Square, Rectangle, Hexagon and Octagon&quot;?]
+*Put the discs in order, smallest first.
+Where should the blank disc go?
+Find the exhibit with the [[missing number-&gt;pg42wing]].*]]
 
-Looking down you [[see-&gt;pg15vase1]]...]]]]</tw-passagedata><tw-passagedata pid="3" name="pg32footprint" tags="" position="817,443" size="100,100">Don&#39;t be afraid. Help is always nearby. When you are stuck, a mysterious helper will guide you. Just follow the instructions one at a time, and see how far you get. Now make your way to the [[Grand Hall-&gt;pg28gem]] to begin your adventure. Good luck!</tw-passagedata><tw-passagedata pid="4" name="pg15vase" tags="" position="666,688" size="100,100">&lt;img 
-src=&quot;https://789stories.files.wordpress.com/2021/01/pg15vase.png&quot;&gt; 
-
-Where will you investigate? 
-[[Library-&gt;pg35portrait-key]]
-[[Kitchens-&gt;pg29key-jewels]]
-[[Cellars-&gt;pg6gem-paintings]]
-[[Main staircase-&gt;pg21portrait-finale]]</tw-passagedata><tw-passagedata pid="5" name="pg35portrait-key" tags="" position="441,839" size="100,100">You step through the library doors. 
-Suddenly it feels cold. 
-(cycling-link: &quot;The wind whistles down the chimney&quot;,&quot;An owl hoots outside&quot;,&quot;A shiver runs down your spine&quot;,&quot;Your tummy rumbles&quot;,&quot;You sneeze&quot;). 
-You start to feel scared. 
-(link-reveal:&quot;But then you hear a friendly woof. &quot;)[
-You instantly feel better again. 
-
-You check the (link-reveal:&quot;windows.&quot;)[ 
-They are locked. 
-The burglars could not enter of leave that way. 
-Then you spot the (link-reveal:&quot;safe.&quot;)[ 
-
-It&#39;s open and empty! 
-The jewels it held have been stolen with the paintings!
-A [[note-&gt;pg35portraitnote]] left inside the safe tells you what to do...]]]</tw-passagedata><tw-passagedata pid="6" name="pg29key-jewels" tags="" position="1196,840" size="100,100">The footprints lead you down a flight of stairs to a large door labelled (link-reveal:&quot;&#39;Kitchens&#39;.&quot;)[
-The smell of fresh bread wafts through the door. Then (link-reveal:&quot;you hear something...&quot;)[
-...it sounds like an animal licking its lips(link-reveal:&quot;!&quot;)[
-
-The kitchens are huge.
-
-There is a great open fireplace. 
-There are banks of ovens, huge wooden tables and racks of pots and pans.
-Just inside the door is a notice board with meal times and menus. 
-
-Someone had pinned up a letter addressed to (link-reveal:&quot;you!&quot;)[
-
-*Dear Detective,
-The burglars have hidden their loot in here!
-Measurements and a recipe will show you where to look.
-In your search, look for a bite with something missing. You will need it to solve this crime!
-Your Friend*
-
-You [[look around-&gt;pg14gem]].]]]]</tw-passagedata><tw-passagedata pid="7" name="pg6gem-paintings" tags="" position="741,839" size="100,100">You open the door labelled &#39;Cellars&#39;.
-
-You see the footprints going (link-reveal:&quot;down the stairs.&quot;)[ 
-The burglars have been down there!
-
-The way ahead is (link-reveal:&quot;dimly lit&quot;)[ 
-by flickering light bulbs hanging on fraying wires. 
-On the first step (link-reveal:&quot;you find a&quot;)[ 
-ball of string resting on a note. 
-You pick up the string and (link-reveal:&quot;read the note...&quot;)[
-
-*Dear Detective, these cellars are a maze.
-Follow the directions carefully.
-When you reach the boiler room, look for shapes hidden there. You will need a shape with no flat faces and no edges to light your way. Watch out for clues along the way and use the string to help you find your way back.
-Your Friend
-p.s. Take care - the burglars have set Minotaur free!*
-
-You&#39;ve heard of the Minotaur. It was a mythical beast. 
-It had a man&#39;s body and a bull&#39;s head! 
-But there can&#39;t be one down here, (link-reveal:&quot;can there?&quot;)[
-
-You tie one end of the string to the doorknob and [[set off down the stairs-&gt;pg12gem]]. 
-You unwind the string as you go. 
-Soft footsteps follow close behind - but somehow you know they are friendly.]]]]]</tw-passagedata><tw-passagedata pid="8" name="pg21portrait-finale" tags="" position="1541,811" size="100,100">You (link-reveal:&quot;run up the stairs. &quot;)[
-
-On the top step you find a scribbled note...
-
-*Dear Detective,
-Do you have the key?
-Have you found the paintings and the jewels?
-If not, go no further, or all will be lost!
-Your Friend*
-
-I [[have not-&gt;pg15vase]] found the KEY, PAINTINGS and JEWELS yet.
-
-I [[have-&gt;pg35key]] found the KEY, PAINTINGS and JEWELS.]
-</tw-passagedata><tw-passagedata pid="9" name="pg35key" tags="" position="1546,939" size="100,100">(link-reveal:&quot;Suddenly you realize a large friendly dog is bounding up the stairs with you. &quot;)[
-It&#39;s Barkimedes the bloodhound. 
-The Mansion is his home, and he&#39;s been (link-reveal:&quot;helping you all along!&quot;)[
-
-On the first-floor landing there are rows of doors. 
-
-All are closed apart from one. 
-You [[step inside-&gt;pg35key2]].]]</tw-passagedata><tw-passagedata pid="10" name="pg35portraitnote" tags="" position="441,990" size="100,100">*Dear Detective,
-You must find a key and an ancient shape with five faces and eight edges. An equilateral triangle is the first clue.
-Your Friend.*
-
-You [[look around-&gt;pg9vase]] for clues.</tw-passagedata><tw-passagedata pid="11" name="pg9vase" tags="" position="440,1142" size="100,100">Looking towards the far wall you see patterns carved around the fireplace. 
-Interestingly, they are not as dusty as the rest of the room. 
-Someone has been touching them!
-
-(link-reveal:&quot;You step closer&quot;)[.
-
-&lt;img 
-src=&quot;https://789stories.files.wordpress.com/2020/04/mansion-of-mazes1-1-1.png&quot;&gt;
-The patterns are triangles!
-
-Is one of them an equilateral triangle?
-
-[[Triangle A is equilateral-&gt;pg38footprint]].
-[[Triangle B is equilateral-&gt;pg39key]].]</tw-passagedata><tw-passagedata pid="12" name="pg38footprint" tags="" position="366,1290" size="100,100">You press triangle A.
-A blast of flames roars from the fireplace! 
-Strong teeth grab your belt and pull you to safety. 
-Who was that?
-
-It was the wrong triangle. 
-An equilateral triangle has three equal sides and three equal angles.
-
-Triangle A only has two equal sides and angles. 
-The third side and angle are different from the others. 
-Triangle A is an isosceles triangle.
+</tw-passagedata><tw-passagedata pid="11" name="pg42wing" tags="" position="1147,818" size="100,100">You arrange the discs in order. 
+The missing number should be clear!
 
 &lt;img
-src=&quot;https://789stories.files.wordpress.com/2021/01/pg38footprint.png&quot;&gt;
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg42wing.png&quot;&gt;
 
-[[Try again-&gt;pg9vasex]].</tw-passagedata><tw-passagedata pid="13" name="pg39key" tags="" position="516,1289" size="100,100">You see fingerprints on triangle B, so you (link-reveal:&quot;press it.&quot;)[ 
-The bookcase to the right of the fireplace swings open. 
+You think the missing number is [[13-&gt;pg28mask]].
+You think the missing number is [[14-&gt;pg31mask]].
+</tw-passagedata><tw-passagedata pid="12" name="pg28mask" tags="" position="1072,967" size="100,100">You are right.
+The rule for the number sequence on the discs is &#39;add 4&#39;.
+The sequence is 1, 5, 9, 13, 17, 21.
 
-It&#39;s a secret door. 
-There is a [[hiding place behind the wall-&gt;pg17key]]. 
-You made the right choice!]</tw-passagedata><tw-passagedata pid="14" name="pg17key" tags="" position="516,1440" size="100,100">You step through the doorway into the hiding place.
-It is a tiny room with walls made from stone block. 
-There is a stool in the centre. 
-On the stool is (link-reveal:&quot;a note...&quot;)[
+You walk around the gallery looking for Exhibit 13. 
+But you can&#39;t find it. 
+(link-reveal:&quot;Then, &quot;)[in the darkest corner of the room, 
+you see two bright (text-colour:green)[eyes] (link-reveal:&quot;shining. &quot;)[
+Somehow the eyes seem friendly, so you (link-reveal:&quot;walk towards them, &quot;)[
 
-*Dear Detective,
-The next clue is at the centre of a hexagon.
-Your friend.*
+There it is - [[Exhibit 13-&gt;pg6coins]]!]]]
+</tw-passagedata><tw-passagedata pid="13" name="pg31mask" tags="" position="1222,968" size="100,100">You see exhibit 14 immediately.
 
-You sit on the stool and (link-reveal:&quot;look around.&quot;)[
-Someone has scratched lines on the walls - perhaps centuries ago when they were hiding from highwaymen! 
-The lines make shapes around the stones.
-&lt;img 
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg17key.png&quot;&gt;
+It&#39;s a huge stone column from a temple.
 
-[[Stone A-&gt;pg7candle]] is at the centre of a hexagon.
-[[Stone B-&gt;pg27vase]] is at the centre of a hexagon.]]</tw-passagedata><tw-passagedata pid="15" name="pg7candle" tags="" position="441,1590" size="100,100">The stone at the centre of the shape is loose.
-You (link-reveal:&quot;pull it out with your fingertips.&quot;)[
-Someone has hidden a slip of paper in the space behind. 
-There is (link-reveal:&quot;something written on it.&quot;)[
+As you (link-reveal:&quot;walk towards it, &quot;)[
+it starts to (link-reveal:&quot;topple!&quot;)[
 
-*Through the Looking Glass
-By Lewis Carroll
-(E,5)*
+(link-reveal:&quot;Watch out!&quot;)[
 
-It&#39;s the title of a book!
-But what does *(E,5)* mean[[?-&gt;pg20gem]]]]</tw-passagedata><tw-passagedata pid="16" name="pg27vase" tags="" position="594,1551" size="100,100">The stone at the centre of the shape is loose. 
-You pull it out with your fingertips. 
-In the dark space behind you (link-reveal:&quot;see&quot;)[ 
-(link-reveal:&quot;a pair of bright eyes &quot;)[
-and the flicker of (link-reveal:&quot;a forked tongue.&quot;)[ 
+A ball of fur leaps at your chest and knocks you sideways.
+The column crashes to the ground - just where you had been standing.
 
-There&#39;s a (colour: green)[snake] in there! 
+Who or what pushed you out of the way?
 
-Quickly before the (colour: green)[snake] can strike, you [[push the stone back.-&gt;pg27vase2]]]]]</tw-passagedata><tw-passagedata pid="17" name="pg20gem" tags="" position="441,1740" size="100,100">You step back into the library. Now you must find the book. There are thousands of them!
-&lt;img 
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg20gem.png&quot;&gt;
-They are so old and dusty, you can&#39;t read the titles on their spines. 
-Finding *Through the Looking Glass* is going to take (link-reveal:&quot;forever!&quot;)[
+You chose the [[wrong number-&gt;pg42wing]].
+The rule for the number sequence on the discs is &#39;add 4&#39;.
+The sequence is 1, 5, 9, 13, 17, 21.]]]
+</tw-passagedata><tw-passagedata pid="14" name="pg6coins" tags="" position="1072,1117" size="100,100">There are 10 carved wooden boxes in Exhibit 13. 
+They are numbered with Roman numerals, 
+but you don&#39;t think they are in any (link-reveal:&quot;order.&quot;)[
 
-Then you see that the bookcases and shelves are marked with letters and numbers. 
-Some are so worn you cannot read them, but you can work out where *(E,5)* is!
+Someone has chalked some words on the (link-reveal:&quot;table...&quot;)[
 
-You decide [[Shelf X-&gt;pg11portrait]] is at *(E,5)*.
-You decide [[Shelf Y-&gt;pg22vase]] is at *(E,5)*.]</tw-passagedata><tw-passagedata pid="18" name="pg11portrait" tags="" position="366,1890" size="100,100">You start to take down the books from shelf X.
-The fourth one you open is *Through the Looking Glass* 
-- you chose the [[correct shelf-&gt;pg26footprint]]!</tw-passagedata><tw-passagedata pid="19" name="pg22vase" tags="" position="516,1890" size="100,100">You reach up to take the books down from shelf Y. 
-As you pull out the first book, a loud bark makes you jump to one side. 
-The bookcase topples and crashes to the floor - just where you had been standing. 
-[[That was close-&gt;pg20gem]]! 
+*Number 6 contains the clue, 
+but lift its lid with care.
+For you may find,
+That when you do,
+There may be something lurking there.*
 
-Where did that bark come from?
+You lift the lid of the box numbered [[IV-&gt;pg32bird]]
+You lift the lid of the box numbered [[VI-&gt;pg34bird]]]]
+</tw-passagedata><tw-passagedata pid="15" name="pg32bird" tags="" position="997,1267" size="100,100">You&#39;ve chosen the wrong box!
 
-You chose the wrong shelf. 
-The *E* and the *5* are elements of the coordinate *(E,5)*. 
-Count right along the bookcases until you get to E. 
-A, B, C, D, E.
-Then count up the shelves until you get to 5.
-1, 2, 3, 4, 5.</tw-passagedata><tw-passagedata pid="20" name="pg26footprint" tags="" position="366,2040" size="100,100">Inside the cover of *Through the Looking Glass*, you find a folded sheet of paper. It&#39;s another clue!
+As you (link-reveal:&quot;lift the lid&quot;)[ 
+you hear a loud buzzing (link-reveal:&quot;sound. &quot;)[
 
-*In Alice&#39;s Looking Glass you can see, 
-Which of the shapes have symmetry!
-Open the book that does* **not** *have a symmetrical shape on the cover.*
+(t8n:&quot;slide-right&quot;)[An enormous wasp zooms out]
+heading straight for your neck.
 
-You look at the first three books that you took down. 
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg26footprint1.png&quot;&gt;
-Each has a shape on the cover. 
+(link-reveal:&quot;It&#39;s going to sting you!&quot;)[
 
-Which shape is (link-reveal:&quot;not symmetrical? &quot;)[
-That&#39;s the book you must (link-reveal:&quot;open.&quot;)[
+You duck into the shadows (link-reveal:&quot;under the table.&quot;)[
 
-You can see that each side of the heart would look identical if held against a mirror. It has a line of symmetry down the middle. The left half is a mirror of the right.
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg26footprint2.png&quot;&gt;
+Confused, the wasp flies away towards a moonlit window.
 
-But which of shapes A and B is not symmetrical?
-
-You [[open book A-&gt;pg29portrait]].
-You [[open book B-&gt;pg5candle]].]]</tw-passagedata><tw-passagedata pid="21" name="pg29portrait" tags="" position="291,2190" size="100,100">You open the book.
-The pages have been cut to make a secret space inside.
-There is something in there.
-It&#39;s a giant centipede! 
-It starts to crawl towards your hand. 
-Then a loud bark makes you jump into action.
-
-You [[slam the book shut-&gt;pg26footprint]].
-
-You chose the wrong book! 
-The face is symmetrical. 
-It has a line of symmetry like the heart.</tw-passagedata><tw-passagedata pid="22" name="pg5candle" tags="" position="441,2191" size="100,100">You open the cover. 
-The pages have been cut to make a secret hiding place inside.
-There is a large (link-reveal:&quot;iron KEY hidden in the space. &quot;)[
-
-(t8n: &quot;pulse&quot;)[YOU HAVE FOUND THE KEY.]
-
-This must be the KEY in the letter!
-
-You&#39;ve chosen the correct book! 
-
-You slip the [[KEY-&gt;pg13key]] into your bag.]
-
-</tw-passagedata><tw-passagedata pid="23" name="pg13key" tags="" position="441,2341" size="100,100">Now you have the key you must find the *&#39;ancient shape&#39;*. 
-What can it be? 
-You (link-reveal:&quot;look around the library for more clues.&quot;)[
-
-There is a large desk in the centre of the room. 
-It is covered with drawings and plans. 
-You (link-reveal:&quot;take a closer look. &quot;)[
-
-One plan seems to be for the library you are standing in!
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg13key.png&quot;&gt;
-
-Someone has scribbled a note in one corner(link-reveal:&quot;...&quot;)[
-
-There is a secret trapdoor!
-Something important could be hidden there. 
-And the plan shows all the carpets in the room. 
-Which one should you look under to find the trap door?
-
-The trapdoor is under [[carpet A-&gt;pg40gem]].
-The trapdoor is under [[carpet B-&gt;pg18footprint]].]]]</tw-passagedata><tw-passagedata pid="24" name="pg40gem" tags="" position="366,2491" size="100,100">You roll up carpet A. 
-Strange fumes start to rise from between the floorboards. 
-You are passing out! 
-Then something pushes the carpet back into place. 
-You feel a wet tongue lick your face, and you come around.
-
-You chose the wrong carpet! 
-The *perimeter* is the distance all the way around a shape. 
-The diagram below shows how to calculate the perimeter of the carpet. 
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2021/01/pg40gem.jpg&quot;&gt;
-Perimeter = 2m + 2m + 2m + 2m = 8m
-Try this with [[carpet B-&gt;pg13key]].</tw-passagedata><tw-passagedata pid="25" name="pg18footprint" tags="" position="516,2491" size="100,100">You roll up carpet B. 
-There is a [[trapdoor-&gt;pg21key]] in the floor beneath! 
-You chose the correct carpet. 
-Its perimeter is 2m + 1m + 2m + 1m = 6m.</tw-passagedata><tw-passagedata pid="26" name="pg21key" tags="" position="516,2639" size="100,100">The trapdoor does not have a handle. It is made from squares of wood - like a chess board. 
-
-Some of the squares are coloured to make patterns.
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg21key.png&quot;&gt;
-
-Then you spot a message scratched into the floorboards(link-reveal:&quot;...&quot;)[
-
-*To open the trapdoor you must press the shapes in order of their area - smallest first. Make sure you do not make a mistake, or you may get a surprise!*
-
-You [[press-&gt;pg10vase]] the shapes 2, 3 and then 1.
-You [[press-&gt;pg37key]] the shapes 2, 1 and then 3. ]</tw-passagedata><tw-passagedata pid="27" name="pg10vase" tags="" position="516,2791" size="100,100">You press the shapes in the order 2, 3 and then 1.
-Nothing happens, so you press harder.
-Suddenly the trapdoor gives way. 
-
-You are falling into to a dark pit!
-
-At the last minute strong teeth grab your shoes. 
-You are dragged back from the danger. 
-The trapdoor swings up and [[slams shut-&gt;pg21key]].
-
-You pressed the shapes in the wrong order. 
-The area is the amount of surface a shape covers. 
-
-When a shape is drawn on a grid you can find its area by counting the squares inside it.</tw-passagedata><tw-passagedata pid="28" name="pg37key" tags="" position="635,2770" size="100,100">It&#39;s the correct sequence. The trapdoor swings smoothly up to reveal a dark hole. There is an [[iron ladder-&gt;pg7key]] going down below.</tw-passagedata><tw-passagedata pid="29" name="pg7key" tags="" position="637,2940" size="100,100">You climb down the ladder in the dark. 
-There are 20 rungs before you reach a cold stone floor 
-- it&#39;s a good job you didn&#39;t fall! 
-
-As you step off the ladder your foot touches something. 
-It rolls away. 
-
-You put your hand down and feel around - it&#39;s a torch!
-You (link-reveal:&quot;press the button&quot;)[ and the torch lights up the room.
-It&#39;s an amazing sight.
-(mouseover:&quot;It&#39;s an amazing sight.&quot;)[
-The trapdoor slams shut above you.
-(mouseover:&quot;The trapdoor slams shut above you.&quot;)[
-Now you are [[trapped-&gt;pg30footprint]]!]]]</tw-passagedata><tw-passagedata pid="30" name="pg30footprint" tags="" position="637,3089" size="100,100">You are in a store room under the library. 
-There are boxes of books, and cabinets filled with strange objects - a telescope, a brass microscope and other ancient scientific instruments. 
-Everything is covered with cobwebs.
-
-(link-reveal:&quot;In one corner you see&quot;)[ 
-a set of mathematical shapes on a shelf.
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg30footprint1.png&quot;&gt;
-
-You remember the description on the letter
-*&#39;an ancient shape with 5 faces and 8 edges&#39;*.
-Perhaps one of these is the shape you need?
-
-You start to count the faces and edges. 
-(link-reveal:&quot;You record the numbers in a table in your notebook...&quot;)[
-
-The first three shapes you check don&#39;t have the correct number of faces and edges. 
-What about the two that are left?
-
-You decided that you need a [[triangle based pyramid-&gt;pg42gem]].
-You decided that you need a [[square based pyramid-&gt;pg36footprint]].]]</tw-passagedata><tw-passagedata pid="31" name="pg42gem" tags="" position="562,3241" size="100,100">You reach for the triangle-based pyramid. 
-
-As you grasp it, the pyramid starts to (colour: orange)[glow]. 
-It&#39;s getting (colour: red)[hotter] and (colour: red)[**hotter**]! 
-(link-reveal:&quot;You can&#39;t let it go!&quot;)[
-
-Sparks fly from its corners - your whole body starts (link-reveal:&quot;to&quot;)[ (t8n:&quot;pulse&quot;)[tingle] and (t8n:&quot;shudder&quot;)[shake]. 
-(mouseover:&quot;shake&quot;)[
-Then something large leaps across the table, 
-knocking the pyramid from your hand. 
-[[Just in time-&gt;pg30footprint]] 
-- it explodes into a thousand pieces with a flash like lightning!
-
-You chose the wrong shape.
-A triangle-based pyramid has 4 faces and 6 edges.]]]</tw-passagedata><tw-passagedata pid="32" name="pg36footprint" tags="" position="712,3239" size="100,100">You pick up the square-based pyramid. 
-It&#39;s heavy in your hand. 
-You (link-reveal:&quot;turn it around. &quot;)[
-There is a picture of the Sun and a message on one face.
-
-*You need me
-to solve a vital clue,
-But first you have to
-leave this room.
-A mummy&#39;s case 
-is the door for you.
-My net will show 
-you what to do.*
-
-(link-reveal:&quot;It doesn&#39;t make sense!&quot;)[
-
-You understand that you will need the pyramid later on, but what&#39;s all that about a mummy&#39;s case and a net?
-
-You [[look desperately around.-&gt;pg36bfootprint]]]]
-
-
-
-</tw-passagedata><tw-passagedata pid="33" name="pg14footprint" tags="" position="665,3541" size="100,100">Cautiously, you reach forward and open the lid. 
-Inside is a mummy wrapped in bandages. 
-Its eyes glow (colour:red)[red]. 
-Its bony hands reach out to grab your neck. 
-It&#39;s going to pull you inside!
-
-Suddenly the mummy case slams shut.
-Someone has pushed the door - there are paw marks on it! The mummy is trapped inside again.
-You chose the wrong case. This is the net for a triangular prism, not a [[pyramid-&gt;pg36bfootprint]].</tw-passagedata><tw-passagedata pid="34" name="pg33portrait" tags="" position="815,3540" size="100,100">Cautiously you reach forward and open the lid. It&#39;s not a case at all - it&#39;s the entrance to a (link-reveal:&quot;secret passage!&quot;)[
-
-(link-reveal:&quot;You made the right choice.&quot;)[
-
-You pop the pyramid in the bag with the key, shine your torch to show the way, and [[set off-&gt;pg31gem]] along the passage.]]</tw-passagedata><tw-passagedata pid="35" name="pg31gem" tags="" position="815,3691" size="100,100">Very soon the passage divides. (link-reveal:&quot;Which way should you go?&quot;)[ 
-
-Then you see someone has chalked the message and a shape on the wall.
+These are the Roman numerals for the numbers 1 to 10. 
 
 &lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg31vase1.png&quot;&gt;
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg32bird.png&quot;&gt;
 
-You (link-reveal:&quot;shine your torch along the two passageways.&quot;)[ 
-There is a pile of blocks in each one. 
-The piles are rotated compared to the drawing. 
-But one of them must have the blocks in the same pattern.
+[[The numeral for 6 is VI and not IV-&gt;pg6coins]].
 
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg31vase2.png&quot;&gt;
+V = 5
+I = 1
+VI = 5 + 1 = 6
+IV = 5 - 1 = 4]]]]</tw-passagedata><tw-passagedata pid="16" name="pg34bird" tags="" position="1147,1267" size="100,100">You&#39;ve chosen the (link-reveal:&quot;correct box!&quot;)[
 
-You chose the [[left passage-&gt;pg4gem]].
-You chose the [[right passage-&gt;pg34footprint]].]]</tw-passagedata><tw-passagedata pid="36" name="pg4gem" tags="" position="740,3841" size="100,100">You take the (link-reveal:&quot;left-hand passage.&quot;)[ 
-
-It&#39;s the correct passage! 
-
-Soon it opens into a small building surrounded by trees. 
-(link-reveal:&quot;You recognize where you are.&quot;)[ 
-
-You are in the Mansion garden - not far from the front door.
-You look back at the Mansion. 
-
-You see a blaze of light in a [[window-&gt;pg16footprint]] at the top of a turret.]]</tw-passagedata><tw-passagedata pid="37" name="pg34footprint" tags="" position="889,3841" size="100,100">You take the right-hand passage. 
-It is steep and slippery. 
-Your shoes lose their grip. 
-You start to slide, dislodging small pebbles along the way. 
-
-Then something grabs your collar and pulls you back to safety. 
-You hear the pebbles splash into a deep underground pool - that could have been you!
-
-You chose the wrong shape. 
-
-Try to [[turn the shapes in your mind-&gt;pg31gem]] to match the one in the drawing. 
-Look at the block at the top of the shape - that will help you.</tw-passagedata><tw-passagedata pid="38" name="pg16footprint" tags="" position="740,3995" size="100,100">(link-reveal:&quot;Which turret was that?&quot;)[
-You will need to know when you go back inside.
-
-(link-reveal:&quot;Then you see&quot;)[ a design of the stone floor of the garden building. 
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg16footprint1.png&quot;&gt;
-
-(link-reveal:&quot;It&#39;s a plan of the mansion.&quot;)[ 
-At the centre of the mansion there is a square hole with triangular sides.
-Against one side there is a picture of the sun.
-
-(link-reveal:&quot;Of course &quot;)[the hole is a pyramid shape!
-
-You take the pyramid from your bag, turn it upside down and see there is a sun on the base. 
-You drop the pyramid into the hole making sure the two suns align. 
+Inside is an ancient scroll.
+It&#39;s tied with a strip of leather.
+You untie the knot and the scroll (link-reveal:&quot;unrolls.&quot;)[
 
 &lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg16footprint2.png&quot;&gt;
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg34bird.png&quot;&gt;
 
-A diagram on the base of the pyramid also shows the points of the compass. 
+It seems to be a list of numbers and instructions.
 
-Now you can tell (link-reveal:&quot;which turret is which!&quot;)[
+You keep the scroll with you - you&#39;re bound to need the instructions soon.
 
-You decide that the light is in the [[south-west turret-&gt;pg42key]].
-You decide that the light is in the [[north-west turret-&gt;pg28vase]].]]]]]</tw-passagedata><tw-passagedata pid="39" name="pg42key" tags="" position="665,4141" size="100,100">That&#39;s the correct turret.
-You write ***&#39;south-west&#39;*** in your notebook. 
+The first line is just the single number &quot;20&quot;.
 
-You also take note of the code word &quot;COMPASS&quot;.
+You guess that you must (link-reveal:&quot;find Exhibit 20 next.&quot;)[
 
-You pick up the pyramid and head back to the [[Grand Hall-&gt;pg15vase]].</tw-passagedata><tw-passagedata pid="40" name="pg28vase" tags="" position="815,4141" size="100,100">That&#39;s the [[wrong turret-&gt;pg16footprint]]! 
-If you go there you will waste too much time.</tw-passagedata><tw-passagedata pid="41" name="pg12gem" tags="" position="741,989" size="100,100">After a few steps the passage splits into two. 
-(link-reveal:&quot;Which way should you go?&quot;)[ 
+You set off slowly in that directing.
 
-Then you see a message chalked on the wall...
+(link-reveal:&quot;Wait a minute!&quot;)[
+Is that purring you can hear?
 
-*Take the passage that is perpendicular to yours.*
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg12gem.png&quot;&gt;
+Feeling encouraged, you [[move more quickly-&gt;pg16coins]].]]]]
+</tw-passagedata><tw-passagedata pid="17" name="pg16coins" tags="" position="1147,1417" size="100,100">Exhibit 20 is a display about Greek mathematics.
 
-You take the passage on your [[left-&gt;pg4vase]].
-You take the passage diagonally on your [[right-&gt;pg42footprint]].]</tw-passagedata><tw-passagedata pid="42" name="pg4vase" tags="" position="666,1139" size="100,100">You took the [[correct passage-&gt;pg22gem]]! 
-
-Perpendicular means &#39;at a right angle&#39;, or 90 degrees. 
-
-The other passageway was at a 45-degree angle to your direction.</tw-passagedata><tw-passagedata pid="43" name="pg42footprint" tags="" position="816,1139" size="100,100">You turn right and keep walking. 
-The passage goes on and on. 
-It&#39;s getting cold and damp. 
-You shiver. 
-
-(link-reveal:&quot;Suddenly&quot;)[ 
-there is a scurrying sound. Something runs over your foot. There are rats down here, hundreds of them! They are biting at your trouser legs! Then something big jumps among the rats - barking and yapping. The rats scurry (link-reveal:&quot;away.&quot;)[
-
-You took the wrong passage! 
-Perpendicular means &#39;at a right angle;&#39; or 90 degrees. You follow the string [[back-&gt;pg12gem]] to the turning point.]]</tw-passagedata><tw-passagedata pid="44" name="pg22gem" tags="" position="666,1289" size="100,100">The passage soon divides again - this time in three direction. 
-
-There is another set of instructions pinned to the wall...
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg22gem.png&quot;&gt;
-
-You take the passageway on the [[left-&gt;pg41candle]].
-You take the passageway on the [[right-&gt;pg34gem]].</tw-passagedata><tw-passagedata pid="45" name="pg41candle" tags="" position="636,1439" size="100,100">You turn left and carry on.
-
-The light bulbs start to (t8n: &quot;pulse&quot;)[flicker] - faster and faster. 
-
-Then they go out(link-reveal:&quot;! &quot;)[
-
-It is completely dark(link-reveal:&quot;! &quot;)[
-
-You hear a (link-reveal:&quot;deep growling sound ahead... &quot;)[
-
-Two (colour:green)[green eyes] appear from the shadows. 
-
-What is it? 
-
-From behind you comes a loud barking sound. 
-The (colour:green)[eyes] back away.
-
-You turn and follow your string [[back-&gt;pg22gem]] to the turning place. 
-
-The lights come back on.
-
-When you turned to the left you turned anticlockwise.
-You should have turned clockwise and gone to the right.
-Clockwise is the same direction as the hands move on an analogue clock.]]]</tw-passagedata><tw-passagedata pid="46" name="pg34gem" tags="" position="741,1440" size="100,100">It&#39;s the correct direction. But soon the passageway splits again - this is giving you a headache! 
-
-There are more instructions taped on the wall.
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg34gem.png&quot;&gt;
-
-You take the passageway on your [[left-&gt;pg12vase]].
-You take the passageway on your [[right-&gt;pg8footprint]].</tw-passagedata><tw-passagedata pid="47" name="pg12vase" tags="" position="711,1589" size="100,100">You have taken the [[correct direction-&gt;pg15key]]. 
-
-An obtuse angle is between 90 degrees and 180 degrees. 
-
-The other direction was less than 90 degrees to your tunnel - that&#39;s an acute angle.</tw-passagedata><tw-passagedata pid="48" name="pg8footprint" tags="" position="817,1589" size="100,100">You turn to the right by less than a right angle, but suddenly come to a (link-reveal:&quot;dead-end.&quot;)[ 
-(link-reveal:&quot;You turn around.&quot;)[
-
-A dog with huge jaws and glowing (colour:green)[green eyes] blocks your path. 
-It&#39;s Minotaur, the bull-mastiff! 
-
-Then you hear growling (link-reveal:&quot;from behind you.&quot;)[ 
-Minotaur looks nervous. 
-The growling gets louder until (link-reveal:&quot;minotaur runs away.&quot;)[
-
-You chose the wrong direction. 
-An obtuse angle is between 90 degrees and 180 degrees. 
-You turned less than 90 degrees - that&#39;s an acute angle.
-
-You follow the string [[back-&gt;pg34gem]] to the turning point.]]]]
-</tw-passagedata><tw-passagedata pid="49" name="pg15key" tags="" position="711,1739" size="100,100">The passageway ends at a door labelled &#39;Candle Store&#39;. 
-You (link-reveal:&quot;turn the handle and enter. &quot;)[
-
-The storeroom is packed with candles on shelves.
+Different shapes, words and a number line are carved in a stone tablet.
 
 &lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg15key.png&quot;&gt;
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg16coins.png&quot;&gt;
 
-You remember the note at the top of the cellar stairs said 
-*You will need a shape with no flat faces and no edges to light your way.&#39;*
+There is a display card below it - (link-reveal:&quot;it looks like a puzzle.&quot;)[
 
-It could be a candle! 
-But (link-reveal:&quot;which will you choose?&quot;)[
+*triangle + square = 7
+square + hexagon = 10
+triangle + pentagon = ?*
 
-You take a [[spherical candle-&gt;pg22footprint]].
-You take a [[cylindrical candle-&gt;pg41portrait]].]]</tw-passagedata><tw-passagedata pid="50" name="pg22footprint" tags="" position="636,1889" size="100,100">You take a spherical candle from the shelf. 
+You decide you must work out the missing number.
 
-You (link-reveal:&quot;step back through the door. &quot;)[
+(link-reveal:&quot;After some thought...&quot;)[
 
-Suddenly all the lights in the passage (link-reveal:&quot;fail!&quot;)[
+You decide the number is [[8-&gt;pg36coins]].
+You decide the number is [[9-&gt;pg8wing]].]]
+</tw-passagedata><tw-passagedata pid="18" name="pg36coins" tags="" position="1072,1567" size="100,100">You run your finger along the number line and press the number 8.
 
-But a flame appears on your candle. 
-It lights your way - just as the letter said it would!
+The stone tablet begins (link-reveal:&quot;to&quot;)[ (t8n:&quot;shudder&quot;)[shake.]
 
-[[You were right-&gt;pg19key]]. 
-A sphere has no flat surfaces or edges. 
-Its surface is a smooth curve all over.]]</tw-passagedata><tw-passagedata pid="51" name="pg41portrait" tags="" position="785,1888" size="100,100">You lift down a cylindrical candle from the shelf. 
+You (link-reveal:&quot;step back. &quot;)[
 
-It&#39;s wick bursts into flame. 
-The other candles start to light, too. 
+It drops to the floor with a (link-reveal:&quot;crash.&quot;)[
 
-The small room gets hotter and hotter! 
-The candles start to melt - the flames start to spread!
+Behind there is the entrance to a secret passage.
 
-You spot a bucket of sand in the corner. 
-You spread the sand to smother the flames - that was close!
+Narrow stairs descend (link-reveal:&quot;into a&quot;)[ lamplit passage.
 
-You chose the wrong candle.
+The shapes&#39; sides were the key:
+A triangle has 3 sides.
+A square has 4 sides.
+So, triangle + square = 3 + 4 = 7.
 
-A cylinder has two flat surfaces in the shape of a circle.
+You were [[correct-&gt;pg20mask]] to work out the answer as 8.
 
-You notice only one candle has not melted it is a [[spherical-&gt;pg22footprint]] candle.</tw-passagedata><tw-passagedata pid="52" name="pg19key" tags="" position="636,2041" size="100,100">As you leave the Candle Store you see another note pinned to the (link-reveal:&quot;door. &quot;)[
+A pentagon has 5 sides, so triangle + pentagon = 3 + 5 = 8.]]]]
+</tw-passagedata><tw-passagedata pid="19" name="pg8wing" tags="" position="1222,1568" size="100,100">You run your finger along the number line and (link-reveal:&quot;press the number 9.&quot;)[
 
-You study the directions on the note...
+(link-reveal:&quot;Nothing happens.&quot;)[
 
-*Dear Detective
-The next passage you need is parallel to the one along which you came. 
-Turn left.
-Then turn again to find it.*
+You are about to turn away then you hear a loud &#39;meow&#39; behind you - perhaps you better (link-reveal:&quot;think again!&quot;)[
+
+The sides of the shapes are the key.
+A triangle has 3 sides.
+A square has 4 sides,
+so triangle + square = 3 + 4 = 7.
+A hexagon had 6 sides,
+so square + hexagon = 4 + 6 = 10.
+
+How many sides does a pentagon have?
+
+Hmmmm Triangle + Pentagon?
+
+[[What is 3 + 5-&gt;pg16coins]]?]]]
+</tw-passagedata><tw-passagedata pid="20" name="pg20mask" tags="" position="1072,1717" size="100,100">Should you climb down the (link-reveal:&quot;stairs? &quot;)[
+
+Not sure what you do, you (link-reveal:&quot;read the next instruction on the scroll...&quot;)[
+
+*Climb down,
+But climb with care.
+The burglars have
+Set traps for you.
+But which stairs are safe - 
+and where?
+Count in threes
+Is what you do.*
+
+You work out that (link-reveal:&quot;you must only step on the stairs&quot;)[ 
+in the sequence 3, 6, 9...
+
+(link-reveal:&quot;But&quot;)[ (link-reveal:&quot;will you step on stair number 16?&quot;)[
+
+You choose [[to step on-&gt;pg32knight]] stair 16.
+You choose [[not to step on-&gt;pg28vase]] stair 16.]]]]]
+</tw-passagedata><tw-passagedata pid="21" name="pg32knight" tags="" position="997,1867" size="100,100">If you step on number 16 you will fall into the burglars&#39; trap!
+
+You must count in threes to find which steps are safe:
+3, 6, 9, 12, 15, 18, 21.... Step 16 is not a [[multiple of three-&gt;pg20mask]].
+</tw-passagedata><tw-passagedata pid="22" name="pg28vase" tags="" position="1142,1865" size="100,100">
+
+
+
+
+
+
+
+(t8n:&quot;slide-down&quot;)[You descend safely to the bottom of the stairs](link-reveal:&quot;, &quot;)[
+(link-reveal:&quot;three steps at a time.&quot;)[
+As you climb down you see the trip wire the burglars had set on step 16.
+
+At the bottom of the stairs, (link-reveal:&quot;you find &quot;)[a [[passageway-&gt;pg11mask]] lit by flickering flames.]]
+]</tw-passagedata><tw-passagedata pid="23" name="pg11mask" tags="" position="1142,2015" size="100,100">At the end of the passageway there are two doors in the wall.
+It looks like there are signs pinned to them.
+
+The next instruction on the scroll says to *look for the truth*.
+
+(link-reveal:&quot;You step closer&quot;)[ and read the notices pinned to the doors...
+
+Door A message reads
+*When you halve an even number, the answer is always an even number*
+
+Door B reads
+*When you double an odd number, the answer is always an even number.*
+
+You decided that the sign on [[door A-&gt;pg27bird]] is true.
+You decided that the sign on [[door B-&gt;pg22bird]] is true.]
+</tw-passagedata><tw-passagedata pid="24" name="pg27bird" tags="" position="1051,2163" size="100,100">You open the door and step into a small room. 
+(link-reveal:&quot;But something is wrong!&quot;)[ 
+(link-reveal:&quot;You cannot breathe! &quot;)[
+
+You just manage to [[return -&gt;pg11mask]] through the door before you pass out.
+
+The notice on the door was false. 
+
+For example, half of 4 is 2, which is an even number.]]
+</tw-passagedata><tw-passagedata pid="25" name="pg22bird" tags="" position="1199,2166" size="100,100">You open the door and step into a small room.
+
+There is a large wooden chest in the (link-reveal:&quot;corner.&quot;)[
+
+The notice was true.
+
+The doubles of odd number are all [[even numbers-&gt;pg5wing]].]
+</tw-passagedata><tw-passagedata pid="26" name="pg5wing" tags="" position="1199,2316" size="100,100">You walk up to the chest and try to (link-reveal:&quot;lift the lid.&quot;)[
+
+(link-reveal:&quot;It&#39;s locked.&quot;)[ 
+On the side of the chest, there is a mysterious number square carved into the wood. 
 
 &lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg19key.png&quot;&gt;
-You leave the Candle Store, turning out of the (link-reveal:&quot;door. &quot;)[
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg5wing.png&quot;&gt;
 
-Soon you come to a space with passages leading in four directions, just as the note said you would. 
+You look closely and see that there is an inscription underneath...
 
-Which one is parallel to the passage along which you came?
+*Tap my lid with the magic number from my magic square.*
 
-You take [[passage 2-&gt;pg38gem]].
-You take [[passage 4-&gt;pg6vase]].]]</tw-passagedata><tw-passagedata pid="53" name="pg38gem" tags="" position="561,2189" size="100,100">You set off along passage 2. 
-It gets colder the further you go.
-There is a door at the end marked &#39;Ice Store&#39;. 
-You open it and (link-reveal:&quot;look inside.&quot;)[ 
-The walls and ceiling are covered in frost. 
+You think the magic number is...
 
-Then (link-reveal:&quot;the door slams behind you.&quot;)[ 
+[[10,-&gt;pg37vase]] [[11,-&gt;pg37vase]] [[12,-&gt;pg37vase]] [[13,-&gt;pg37vase]] [[14,-&gt;pg37vase]] [[15,-&gt;pg15mask]] [[16,-&gt;pg37vase]] [[17-&gt;pg37vase]]
 
-You hear a key turn in the (link-reveal:&quot;lock!&quot;)[ 
-(link-reveal:&quot;You are trapped!&quot;)[ 
-(link-reveal:&quot;You will freeze!&quot;)[
+You don&#39;t know the magic number and would like a [[hint-&gt;pg37vase]].]]
+</tw-passagedata><tw-passagedata pid="27" name="pg15mask" tags="" position="1124,2474" size="100,100">(link-reveal:&quot;You&#39;re right!&quot;)[
 
-Then you hear paws scrabbling at the door. The key drops to the floor with a clang. It is pushed under the door so you can escape!
-
-You chose the wrong direction.
-
-When two directions are parallel the are the same distance apart at every point and never meet.
-
-You follow the string [[back-&gt;pg19key]] along the passageway.]]]]]</tw-passagedata><tw-passagedata pid="54" name="pg6vase" tags="" position="711,2189" size="100,100">You have chosen the (link-reveal:&quot;correct direction!&quot;)[
-
-You walk along the (link-reveal:&quot;passage.&quot;)[
-
-The air gets warmer. 
-You hear the hiss of steam and the roar of flames. 
-You must be heading for the [[boiler room-&gt;pg27key]]. 
-That&#39;s where the letter told you to go!]]</tw-passagedata><tw-passagedata pid="55" name="pg27key" tags="" position="712,2339" size="100,100">The boiler room door is open. 
-It&#39;s very hot inside. 
-The fire is (colour: red)[blazing] inside the (link-reveal:&quot;furnace. &quot;)[
-
-Hot steam pipes (t8n: &quot;shudder&quot;)[rattle] (link-reveal:&quot;and&quot;)[ (t8n: &quot;rumble&quot;)[hiss. ]
-The pressure gauge shows (link-reveal:&quot;danger&quot;)[ - the boiler is about the explode!
-You see a (link-reveal:&quot;notice on the boiler wall...&quot;)[
-
-*In an emergency, turn the valve wheel 360 degrees. T
-his will release the pressure.*
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg27key.png&quot;&gt;
-
-You decide to turn the wheel [[half a turn-&gt;pg43portrait]].
-You decide to turn the wheel [[one whole turn-&gt;pg5key]].]]]]</tw-passagedata><tw-passagedata pid="56" name="pg43portrait" tags="" position="636,2489" size="100,100">You&#39;ve made half a turn.
-That&#39;s only 180 degrees! 
-The pipes start to shake and squeal! 
-(link-reveal:&quot;You realize your mistake. &quot;)[
-You turn the wheel another half turn. 
-That makes 360 degrees altogether.
-
-The pressure starts to fall...[[phew-&gt;pg11key]]]</tw-passagedata><tw-passagedata pid="57" name="pg5key" tags="" position="786,2489" size="100,100">You have turned the wheel a whole turn. 
-
-That&#39;s correct. 
-One whole turn is 360 degrees. 
-
-The pressure starts to fall and the boiler settles down...[[phew-&gt;pg11key]]!</tw-passagedata><tw-passagedata pid="58" name="pg11key" tags="" position="815,2640" size="100,100">You look around the rest of the boiler room. 
-In one corner you see stacks of thin parcels wrapped with brown paper.
-
-Are they the (link-reveal:&quot;stolen paintings?&quot;)[
-You look closely at the parcels.
-You recognise some of the shapes, but there are too many!
-Then you find a note (link-reveal:&quot;on one of the parcels...&quot;)[
-
-*Dear Detective, the burglars have hidden the stolen paintings with some fakes. One of the burglars will be back soon to mover the paintings to another hiding place. You must take the genuine paintings and hide them now. 
-Hurry!
-Your Friend*
-
-You look back at your notebook for the shapes of the paintings.
-You&#39;ve (link-reveal:&quot;written&quot;)[ 
-&#39;square, rectangle, hexagon, octagon&#39;.
-
-You decide to [[take these shapes-&gt;pg39candle]].
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg11key1.png&quot;&gt;
-
-You decide to [[take these shapes-&gt;pg20vase]].
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg11key2.png&quot;&gt;]]]</tw-passagedata><tw-passagedata pid="59" name="pg39candle" tags="" position="922,2792" size="100,100">You have taken the (link-reveal:&quot;correct paintings!&quot;)[
-
-(t8n: &quot;pulse&quot;)[YOU HAVE FOUND THE PAINTINGS.]
-
-You run from the boiler room with them in your arms.
-
-(link-reveal:&quot;You hear &quot;)[
-heavy footsteps coming down the passageway. 
-
-(link-reveal:&quot;Which way should you go? &quot;)[
-
-Then you hear a (link-reveal:&quot;scraping sound. &quot;)[
-
-A hidden door is opening in the wall! 
-
-You feel afraid and turn to run, (link-reveal:&quot;but&quot;)[ strong teeth grab you from behind. 
-They pull you through the [[door-&gt;pg39candle2]].]]]]]</tw-passagedata><tw-passagedata pid="60" name="pg20vase" tags="" position="793,2792" size="100,100">A loud barking noise warns you that something is wrong. 
-You have not picked up the real paintings!
-Quickly you [[put down the fake paintings-&gt;pg11key]].
-
-A trapezium has 4 sides and one set of parallel lines. A hexagon has six sides.
-A pentagon has 5 sides. An octagon has eight sides.
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg11key2.png&quot;&gt;</tw-passagedata><tw-passagedata pid="61" name="pg39candle2" tags="" position="922,2941" size="100,100">You are in a small room filled with precious china, silver plates and candlesticks. 
-This is where the Mansion&#39;s valuables are kept! 
-It&#39;s a great place to hide the (link-reveal:&quot;paintings.&quot;)[
-
-Then you hear an (link-reveal:&quot;angry shout. &quot;)[
-The burglar has discovered the paintings are gone! 
-They run back the way they came - you here footsteps disappearing into the distance.
-
-You have saved the paintings! (link-reveal:&quot;but&quot;)[ there is still much to do. 
-There are burglars to catch!
-
-The secret door opens again as you [[push-&gt;pg26gem]] it.]]]</tw-passagedata><tw-passagedata pid="62" name="pg26gem" tags="" position="922,3091" size="100,100">You begin to follow the string to find your way back. 
-As you pass the boiler room you see (link-reveal:&quot;something shining on the floor.&quot;)[ 
-It&#39;s a silver button it could be another clue!
-
-You take note of the code word &quot;SILVER&quot; 
-
-Then you pop the button in your pocket, and follow the string all the way back to the [[entrance hall-&gt;pg15vase]].]</tw-passagedata><tw-passagedata pid="63" name="pg14gem" tags="" position="1196,990" size="100,100">Then you see a set of kitchen scales on a table. 
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/05/pg14gem2.png&quot;&gt;
-Next to it is a bag of flour, and a floury handprint on the table top. 
-The hand that made the print has a scar! 
-
-(link-reveal:&quot;**You sketch the print in your notebook.**&quot;)[
-
-Someone has left a list of instructions on a scrap of paper next to the flour.
-
-You decide to follow the instructions to work out what they were doing!
-
-(link-reveal:&quot;*1. Weigh out exactly 0.5kg of flour.*&quot;)[
-
-You see two sets of weights.
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg14gem.png&quot;&gt;
-
-Set A has the weights 200g, 200g and 100g. You select [[set A-&gt;pg6footprint]].
-Set B has the weights 20g, 20g and 10g. You select [[set B-&gt;pg40footprint]].]]</tw-passagedata><tw-passagedata pid="64" name="pg6footprint" tags="" position="1121,1140" size="100,100">You chose the [[correct-&gt;pg23key]] weights! 
-
-You add the flour until the scales are level.</tw-passagedata><tw-passagedata pid="65" name="pg40footprint" tags="" position="1271,1140" size="100,100">You put the weights on the scale and (link-reveal:&quot;start to pour the flour.&quot;)[
-The scales (link-reveal:&quot;tilt with a jerk. &quot;)[
-
-Someone has tied a string to one pan - (link-reveal:&quot;it&#39;s a trap!&quot;)[
-
-The string pulls a jar of oil from a shelf onto an oven. 
-The jar shatters. 
-The oil catches fire! 
-(link-reveal:&quot;You must not put water on an oil fire - the fire will spread!&quot;)[ 
-
-Then a bark makes (link-reveal:&quot;you turn. &quot;)[
-
-You see a fire blanket next to the ovens. 
-You grab it and spread it over the flames. 
-
-The flames go out. 
-
-There are 1000g in a kg, so 0.5 kg is 500g not 50g.
-
-You try [[again-&gt;pg14gem]] cautiously.]]]]]</tw-passagedata><tw-passagedata pid="66" name="pg23key" tags="" position="1121,1290" size="100,100">You read the next instructions...
-
-*2. Put the flour in the bowl with a radius of 15cm.*
-
-There is a row of bowls - all different sizes - high on a shelf.
-But (link-reveal:&quot;which is the 15 cm radius bowl?&quot;)[
-
-Then you remember your long school ruler is 30cm long.
-You try to imagine your ruler next to each of the bowls.
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg23key.png&quot;&gt;
-
-You lift down [[bowl X-&gt;pg18vase]].
-You lift down [[bowl Y-&gt;pg37gem]].]</tw-passagedata><tw-passagedata pid="67" name="pg18vase" tags="" position="1046,1446" size="100,100">You have chosen the correct bowl, its diameter is 30cm, so its radius is 15 cm. 
-
-You read the next instruction...
-
-*3. Add a sprinkle of salt, some yeast, and 250ml of water to the flour in the bowl.*
-
-You look around for some [[salt-&gt;pg10gem]].</tw-passagedata><tw-passagedata pid="68" name="pg37gem" tags="" position="1196,1446.3333129882812" size="100,100">As you lift the bowl from the shelf you look inside. 
-A row of shiny white eyes (link-reveal:&quot;stares back! &quot;)[
-It&#39;s a (link-reveal:&quot;huge poisonous spider!&quot;)[
-
-A large bark makes you drop the bowl. 
-It shatters and the spider scuttles behind the sinks.
-
-You chose the wrong bowl!
-The radius of a circle is half its diameter. Bowl Y has a diameter of 15cm, so its radius is 7.5 cm.
-
-[[Try again-&gt;pg23key]].]]</tw-passagedata><tw-passagedata pid="69" name="pg10gem" tags="" position="1046,1595" size="100,100">You see three shakers on a shelf.
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/05/pg10vase.png&quot;&gt;
-
-There is a (link-reveal:&quot;note next to them...&quot;)[
-*The salt is the shaker that rolls but will not roll away.
-Make sure you chose the right one!*
-
-You chose the [[cylindrical shaped shaker-&gt;pg38vase]].
-You chose the [[conical shaped shaker-&gt;pg34vase]].]</tw-passagedata><tw-passagedata pid="70" name="pg38vase" tags="" position="971,1745" size="100,100">You shake the cylinder over your hand to (link-reveal:&quot;check. &quot;)[
-
-It&#39;s pepper not salt.
-But this is not ordinary pepper - (link-reveal:&quot;its extra strong!&quot;)[
-
-Your eyes are watering, your nose running and you mouth is burning. 
-You think your head will (link-reveal:&quot;explode!&quot;)[
-
-Then something pushes you to the sinks - you need to wash the pepper away. You hold your hands and head under a running tap until you feel [[better-&gt;pg10gem]].
-
-A cylinder rolls in a straight line when you lay it on its side.]]]</tw-passagedata><tw-passagedata pid="71" name="pg34vase" tags="" position="1121,1740" size="100,100">You shake the cone over the flour bowl. 
-Its the right shaker. 
-A sprinkle of salt falls onto the flour.
-A cone rolls around in a circle when you lay it on its side.
-
-On the shelf next to the shakers you see a jar labelled (link-reveal:&quot;&#39;yeast&#39;. &quot;)[
-You add a spoonful of that you your mixture too.
-
-Now you need some [[water-&gt;pg32gem]].]</tw-passagedata><tw-passagedata pid="72" name="pg32gem" tags="" position="1121,1890" size="100,100">There are plenty of taps over the sinks, but (link-reveal:&quot;how will you measure 250ml?&quot;)[
-You see a measuring jug. 
-(link-reveal:&quot;That&#39;s what you need! &quot;)[
-
-The jug has a scale. 
-It is marked 1 liter at the top, but the only other markings are fractions.
-
-Luckily you think (link-reveal:&quot;you know how many milliliters there are in a liter.&quot;)[
-So you fill the jug to the correct level.
+The numbers in each row, column and diagonal of a magic square always add up to the same magic number.
 
 &lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg32gem.png&quot;&gt;
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg37vase.png&quot;&gt;
 
-You fill the jug to the [[1/2 mark-&gt;pg17vase]].
-You fill the jug to the [[1/4 mark-&gt;pg31vase]].]]]</tw-passagedata><tw-passagedata pid="73" name="pg17vase" tags="" position="1046,2040" size="100,100">(link-reveal:&quot;That&#39;s too much water! &quot;)[
-As you lift the jug, its handle (link-reveal:&quot;snaps. &quot;)[
+The magic number for this square is (link-reveal:&quot;15.&quot;)[
 
-It had been partly cut through! 
-The (link-reveal:&quot;jug shatters. &quot;)[
-The water seeps between the flagstones on the kitchen floor. 
-(colour: green)[Ivy] starts to grow from the cracks.
-It wraps around your ankles - (link-reveal:&quot;you are trapped!&quot;)[
-
-Then you feel strong jaws grab your belt and pull.
-You break free from the tendrils. 
-
-Quickly, you sprinkle salt on the (colour: green)[ivy leaves], and they shrink back.
-
-There are 1000ml in a liter.
-So 250ml is less than 1/2 liter. 
-(link-reveal:&quot;How many 250s go into 1000? &quot;)[
-Therefore, what fraction of 1000 is 250?
-
-You find another jug and try [[again-&gt;pg32gem]].]]]]]</tw-passagedata><tw-passagedata pid="74" name="pg31vase" tags="" position="1197,2041" size="100,100">You have measured correctly! 
-As you stir in the water, the mixture becomes soft and rubbery. 
-It&#39;s bread dough! 
-That must be the (link-reveal:&quot;clue.&quot;)[
-
-You remember smelling baking bread.
-Someone has been baking just before you arrived.
-It must have been the burglars, 
-but (link-reveal:&quot;why would they bake bread in the middle of a robbery?&quot;)[
-
-You [[look around-&gt;pg7portrait]] for the newly baked bread.]]</tw-passagedata><tw-passagedata pid="75" name="pg7portrait" tags="" position="1196,2190" size="100,100">The smell leads you into the larder where there is a pile of fresh loaves.
+You tap 15 times on the lid and it (link-reveal:&quot;opens.&quot;)[
+Inside there is a clay tablet covered in strange writing.
 
 &lt;img
-src=&quot;https://789stories.files.wordpress.com/2021/01/pg7portrait.jpg&quot;&gt;
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg15maskreverse.png&quot;&gt;
 
-One of the loaves has a (link-reveal:&quot;bite mark in it. &quot;)[
-The burglar could not resist eating the warm bread!
+You don&#39;t know what it means, but you think it might be important. 
+You put the tablet in your bag. 
+And (link-reveal:&quot;wait!&quot;)[
+There&#39;s something written on the bottom of the chest(link-reveal:&quot;!&quot;)[
 
-Then you notice (link-reveal:&quot;something odd.&quot;)[
-There is a gap in the teeth marks.
-It&#39;s another (link-reveal:&quot;clue!&quot;)[
+*Now retrace your steps if you can,
+Back to where you began,
+But look for patterns you can see,
+You&#39;ve still not found the Roman key.*
 
-This burglar has a missing tooth!
+You [[retrace your steps-&gt;pg22wing]].]]]]]</tw-passagedata><tw-passagedata pid="28" name="pg37vase" tags="" position="1278,2474" size="100,100">The numbers in each row of a magic square always add up to the same &#39;magic number&#39;. 
+The numbers in the columns and diagonals add up to the magic number, too.
 
-You take the piece with the teeth marks to use as [[evidence-&gt;pg39portrait]].]]]</tw-passagedata><tw-passagedata pid="76" name="pg39portrait" tags="" position="1196,2341" size="100,100">As you pick up the loaf it feels too heavy for bread. 
-You (link-reveal:&quot;break the loaf open. &quot;)[
-
-There is necklace inside! 
-You feel the other loaves. 
-They are heavy, (link-reveal:&quot;too. &quot;)[
-
-That&#39;s how the burglars have hidden the (link-reveal:&quot;jewels!&quot;)[
-
-(t8n: &quot;pulse&quot;)[YOU HAVE FOUND THE JEWELS.]
-
-Then you hear (link-reveal:&quot;footsteps in the corridor.&quot;)[
-
-One of the burglars is coming back. 
-
-(link-reveal:&quot;Quickly&quot;)[ you hide the broken bread under the other loaves.
-
-You spot a cupboard where you can [[hide-&gt;pg43candle]], 
-but before you get inside, you sprinkle flour on the floor.]]]]]</tw-passagedata><tw-passagedata pid="77" name="pg43candle" tags="" position="1196,2498" size="100,100">From inside the cupboard you hear the burglar&#39;s (link-reveal:&quot;footsteps.&quot;)[
-
-Luckily he or she doesn&#39;t spot the broken loaf. 
-
-You keep still until the [[footsteps retreat-&gt;pg9key]].]</tw-passagedata><tw-passagedata pid="78" name="pg9key" tags="" position="1196,2641" size="100,100">As you climb out from the cupboard you look at the floor. 
-
-The burglar has left clear (link-reveal:&quot;footprints in the flour. &quot;)[
-You take out your notebook and make a careful sketch...
+[[Check for yourself-&gt;pg5wing2]].
 
 &lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg9key-1.png&quot;&gt;
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg37vase.png&quot;&gt;
+</tw-passagedata><tw-passagedata pid="29" name="pg22wing" tags="" position="1125,2616" size="100,100">Through the door, along the passage, (link-reveal:&quot;up the steps &quot;)[
+(three at a time) and back into the (text-colour:black)+(background:purple)[Greek and Roman Galleries].
 
-You also write down the code word &quot;BREAD&quot;
+But what was that about patterns?
 
-There are some paw prints as well!!
+As you head back towards the main entrance hall you see a sign, pointing in the direction for the (link-reveal:&quot;Mosaic Exhibition.&quot;)[ 
+Mosaics - they are patterns!
 
-Now you have located the jewels in the kitchen and found the teeth marks in the bread, you must (link-reveal:&quot;look for clues in other parts of the Mansion. &quot;)[
+You turn in the direction of the sign.
 
-You head back to the [[Grand Hall-&gt;pg15vase]] as fast as you can!]]</tw-passagedata><tw-passagedata pid="79" name="pg35key2" tags="" position="1546,1088" size="100,100">It&#39;s the (link-reveal:&quot;owner&#39;s bedroom!&quot;)[
-
-The burglars have been in and stolen some of his clothes! 
-Why would they do that?
-
-In their hurry they seem to have (link-reveal:&quot;knocked the clock from the table.&quot;)[
-
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2021/01/pg35key.jpg&quot;&gt;
-
-If you think the clock stopped at a quarter past nine [[click here-&gt;pg18gem]].
-If you think the clock stopped at a quarter to three [[click here-&gt;pg40vase]].]]</tw-passagedata><tw-passagedata pid="80" name="pg18gem" tags="" position="1471,1238" size="100,100">That&#39;s (link-reveal:&quot;the correct time!&quot;)[
-The clock was stopped at a quarter past nine.
-
-Then you see (link-reveal:&quot;a note on the mantlepiece.&quot;)[
-
-You read it carefully...
-
-*Dear Detective,
-Reset the clock to the correct time. The burglars have set it to the wrong time to confuse you!
-Your Friend.*
-
-You look at your watch to see the time now...
-&lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg18gem1.png&quot;&gt;
-
-After you set it the clock looks like [[clock A-&gt;pg35candle]].
-After you set it the clock looks like [[clock B-&gt;pg13portrait]].
+There&#39;s that purring sound again...[[what could it be-&gt;pg35mask]]?]]
+</tw-passagedata><tw-passagedata pid="30" name="pg35mask" tags="" position="1124,2766" size="100,100">There are two mosaics on the floor ahead. 
 
 &lt;img
-src=&quot;https://789stories.files.wordpress.com/2021/01/pg18gem2.png&quot;&gt;]]</tw-passagedata><tw-passagedata pid="81" name="pg40vase" tags="" position="1621,1238" size="100,100">That&#39;s (link-reveal:&quot;the wrong time! &quot;)[
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg35mask.png&quot;&gt;
 
-The big hand shows the minutes and the little hand the hours. 
+They are different patterns, but what are you supposed to do?
+You look at the next instructions on the scroll(link-reveal:&quot;...&quot;)[
 
-The little hand is on the nine. 
-The big hand is pointing at three - a quarter of the way around the clock face. 
-It is a quarter past nine. 
+*Step on the pattern that&#39;s half white.
+But beware, if you are wrong, you&#39;re in for a fright!*
 
-We could also call this nine fifteen, 9:15, because there are 60 minutes in an hour and so a quarter of an hour is 15 minutes.
+You step on [[Mosaic A-&gt;pg15vase]].
+You step on [[Mosaic B-&gt;pg9coins]].]
+</tw-passagedata><tw-passagedata pid="31" name="pg15vase" tags="" position="1049,2916" size="100,100">Oh no! 
+You&#39;ve chosen the (link-reveal:&quot;wrong pattern.&quot;)[
 
-You [[try again-&gt;pg35key2]].]</tw-passagedata><tw-passagedata pid="82" name="pg35candle" tags="" position="1396,1388" size="100,100">That&#39;s correct!
+There are 16 squares altogether and 7 are white. 
+(link-reveal:&quot;That&#39;s less than half.&quot;)[
 
-As you move the hands to the correct time, it starts to [[tick-&gt;pg5portrait]].</tw-passagedata><tw-passagedata pid="83" name="pg13portrait" tags="" position="1546,1388" size="100,100">You&#39;ve set the clock to the wrong time!
+The mosaic crumbles beneath your feet. 
+You start to (link-reveal:&quot;fall into a bottomless pit. &quot;)[
+At the last moment, you grab the bottom of a nearby curtain. 
 
-Its alarm starts to sound loudly.
+Slowly you haul yourself out from the hole. 
 
-The burglars will hear it!
+The pieces of the mosaic move [[back-&gt;pg35mask]] into place.]]]
+</tw-passagedata><tw-passagedata pid="32" name="pg9coins" tags="" position="1199,2916" size="100,100">You have chosen the (link-reveal:&quot;correct mosaic! &quot;)[
 
-(link-reveal:&quot;Quickly,&quot;)[ you take a pillow from the bed and muffle the sound until it stops.
-&#39;1:30&#39; is the same as &#39;half-past one&#39;.
+As you step on the mosaic you hear ancient machinery rumble and groan.
 
-You try [[again-&gt;pg18gem]].]</tw-passagedata><tw-passagedata pid="84" name="pg5portrait" tags="" position="1396,1538" size="100,100">You look around the bedroom for more clues. 
-You see a door next to the bed. 
-The door is open a crack and you see the light is on.
-You (link-reveal:&quot;open the door slowly&quot;)[ 
-and find yourself in a small bathroom. 
-The (link-reveal:&quot;basin is a mess. &quot;)[
-Someone has been using hair dye and hair (link-reveal:&quot;clippers!&quot;)[
+The mosaic starts to rise.
 
-Then you see someone has been playing noughts and crosses in the steam on the bathroom mirror.
-&lt;img 
-src=https://789stories.files.wordpress.com/2020/04/pg5portrait.png&gt;
-
-There is a message underneath...
-
-*Add a nought or a cross to make the pattern symmetrical.*
-
-You add a [[cross-&gt;pg23portrait]].
-You add a [[nought-&gt;pg19portrait]].]]]</tw-passagedata><tw-passagedata pid="85" name="pg23portrait" tags="" position="1322,1688" size="100,100">(link-reveal:&quot;A cross is correct!&quot;)[
-
-The pattern looks the same if you turn it by 90 or 180 degrees (rotational symmetry) or look at it in a mirror.
-As you add the cross, steam starts to clear from the mirror.
-
-Another (link-reveal:&quot;message is revealed...&quot;)[
-
-*Dear Detective
-Clothes and hair dye 
-may disguise,
-But don&#39;t be fooled
-by burglar lies!
-Now follow me to the turret, 
-to put an end to this crime!
-Your Friend.*
-
-[[Barkimedes leads the way-&gt;pg23portrait2]].]]</tw-passagedata><tw-passagedata pid="86" name="pg19portrait" tags="" position="1471,1688" size="100,100">As you add a nought to the pattern, the (link-reveal:&quot;bathroom begins to fill with steam. &quot;)[
-
-The taps gush scalding water.
-(link-reveal:&quot;You can&#39;t turn them off!&quot;)[
-
-You try the door and find that it has been locked behind you - (link-reveal:&quot;you cannot escape!&quot;)[
-
-Then there is a (link-reveal:&quot;loud crash.&quot;)[
-
-It&#39;s Barkimedes! 
-He has broken through the door. 
-He has a large spanner in his mouth.
-You use the spanner to [[turn off-&gt;pg5portrait]] the taps.
-
-Adding a nought did not make the pattern symmetrical.
-There are now more noughts on the right than on the left.]]]]</tw-passagedata><tw-passagedata pid="87" name="pg23portrait2" tags="" position="1321,1838" size="100,100">Together you follow the burglar&#39;s footprints from the bedroom into the (link-reveal:&quot;passage.&quot;)[
-
-The passage twists and (link-reveal:&quot;turns.&quot;)[
-
-You pass dozens more rooms, but they are all empty.
-
-The passage finally ends at an old wooden door, leading to the turrets.
-The (link-reveal:&quot;door is locked!&quot;)[
-
-But you have the old iron [[key-&gt;pg33key]].]]]</tw-passagedata><tw-passagedata pid="88" name="pg33key" tags="" position="1321,1988" size="100,100">You take the key from your bag and fit it in the keyhole.
-It&#39;s stiff but you manage to (link-reveal:&quot;turn it. &quot;)[
-
-A short flight of stairs climbs to a circular room.
-
-Four passageways lead from the room at right angles to each other.
-
-The passages lead to the turrets!
-
-But (link-reveal:&quot;which is which?&quot;)[
-
-Then you see it!
-
-There is a pyramid-shaped hole at the centre of the floor. 
-Just like the one in the (link-reveal:&quot;garden! &quot;)[
-
-You take the pyramid from you bag and drop it into the hole with the sun picture on the correct side. 
-
-Now you can go to the correct turret!
+(t8n:&quot;slide-up&quot;)[You are carried up until your eyes are level with a [[stone plaque-&gt;pg31vase]] high on the wall.]]
+</tw-passagedata><tw-passagedata pid="33" name="pg31vase" tags="" position="1199,3066" size="100,100">You read the inscription on the plaque...
 
 &lt;img
-src=&quot;https://789stories.files.wordpress.com/2021/01/pg33key.png&quot;&gt;
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg31vase.png&quot;&gt;
 
-You chose [[turret X-&gt;pg8gem]].
-You chose [[turret Y-&gt;pg28footprint]].]]]</tw-passagedata><tw-passagedata pid="89" name="pg8gem" tags="" position="1316,2160" size="100,100">You set off along the passage.
+You [[press 66-&gt;pg22knight]].
+You [[press 99-&gt;pg14knight]].
+</tw-passagedata><tw-passagedata pid="34" name="pg22knight" tags="" position="1124,3216" size="100,100">(link-reveal:&quot;Nothing happens.&quot;)[
 
-Soon you see (link-reveal:&quot;footprints.&quot;)[
+You pushed the wrong number(link-reveal:&quot;!&quot;)[
 
-You must be going in the (link-reveal:&quot;right direction!&quot;)[
+The diagram below shows where 100 is on the number line.
+The number 99 is only 1 less that 100.
+It is just less than halfway between 0 and 200.
 
-At the end of the passage you find a door. 
-It opens onto a (link-reveal:&quot;spiral staircase. &quot;)[
+The machinery reverses. 
+The mosaic starts to drop
 
-You saw the light at the top of the turret, so you [[climb up-&gt;pg8gem2]].]]]</tw-passagedata><tw-passagedata pid="90" name="pg28footprint" tags="" position="1435,2117" size="100,100">Barkimedes barks and you realise that this is the wrong turret!
-If you go in there you will waste too much time.
+Quick, [[try again-&gt;pg31vase]]
+before it&#39;s too late!]]
+</tw-passagedata><tw-passagedata pid="35" name="pg14knight" tags="" position="1322,3628" size="100,100">(link-reveal:&quot;Good choice!&quot;)[
 
-You go [[back-&gt;pg33key]] to check the design on the stone floor again.</tw-passagedata><tw-passagedata pid="91" name="pg8gem2" tags="" position="1316,2310" size="100,100">You&#39;re getting so used to all this math that you decide to (link-reveal:&quot;count the stairs as you climb.&quot;)[
-
-There are exactly (link-reveal:&quot;28.&quot;)[
-
-The staircase ends at another door.
-
-There is a note pinned to the wood.
-(link-reveal:&quot;You read it carefully...&quot;)[
-
-*Dear Detective,
-Each door in this tower has a name.
-The number of steps you climbed to reach the door is the clue to which handle to pull.
-Your Friend.*
-
-There are two handles on the door, one labelled January, the other February.
-
-You turn the [[January-&gt;pg42vase]] handle.
-You turn the [[February-&gt;pg41key]] handle.]]]</tw-passagedata><tw-passagedata pid="92" name="pg42vase" tags="" position="1316,2463" size="100,100">The January handle comes away in your hand!
-The door starts to shake.
-
-(link-reveal:&quot;Smoke and flames spurt from the edges.&quot;)[
-Quickly you place the handle back in position and (link-reveal:&quot;the flames subside.&quot;)[
-
-How many days are there is January?
-How many days are there in February?
-How many steps did you climb?
-
-You realize your mistake and [[try again-&gt;pg8gem2]].]]</tw-passagedata><tw-passagedata pid="93" name="pg41key" tags="" position="1436,2460" size="100,100">You grip the February handle and (link-reveal:&quot;turn it. &quot;)[
-The door opens. 
-You had remembered the old rhyme...
-
-*30 days has September,
-April June and November,
-All the rest have 31,
-Saving February alone.
-Which has but only 28 days clear
-And 29 in each leap year.*
-
-You [[step inside-&gt;pg37vase]] ready to face the burglars.
-Barkimedes is by your side.]</tw-passagedata><tw-passagedata pid="94" name="pg37vase" tags="" position="1436,2612" size="100,100">The (link-reveal:&quot;room is empty!&quot;)[
-
-There is a just a lamp standing on a table next to a hastily written letter...
-
-*Dear Detective
-I have tracked the burglars to their hiding place. They are deep underground behind the &#39;Days of the Year&#39; door!
-You must count the stairs carefully as you descend
-The &#39;Leap Year&#39; door leads to danger!
-Hurry - I need your help!
-
-Your Friend.*
-
-As fast as you can you race down the stairs, (link-reveal:&quot;counting as you go...&quot;)[
-*three hundred and sixty
-three hundred and sixty one
-three hundred and sixty two...*
-
-Remembering the last message you can&#39;t work out whether you need to stop at step [[365-&gt;pg10footprint]] or [[366-&gt;pg16gem]].]]</tw-passagedata><tw-passagedata pid="95" name="pg10footprint" tags="" position="1361,2760" size="100,100">You reach step 365 and (link-reveal:&quot;stop.&quot;)[
-There is a door on the left. 
-This must be it! 
-You (link-reveal:&quot;listen for a moment. &quot;)[
-
-There are (link-reveal:&quot;voices inside!&quot;)[
-
-Taking a deep breath you open the door and [[step-&gt;pg43footprint]] through.
-You feel reassured that Barkimedes is with you.]]]</tw-passagedata><tw-passagedata pid="96" name="pg16gem" tags="" position="1511,2760" size="100,100">You reach step 366 and stop.
-There is a door on the right. 
-This must be it! 
-You (link-reveal:&quot;listen for a moment. &quot;)[
-
-There are voices inside!
-
-Taking a deep breath, you open the door and [[step-&gt;pg12footprint]] through.
-You feel reassured that Barkimedes is with you.]</tw-passagedata><tw-passagedata pid="97" name="pg12footprint" tags="" position="1511,2910" size="100,100">The room is empty!
-
-The sound of voices is coming through an air vent.
-
-(link-reveal:&quot;The door slams behind you.&quot;)[
-
-Then you hear a (link-reveal:&quot;rumble.&quot;)[
-
-The stone floor is sliding to one side,
-There is a (link-reveal:&quot;pit of fire below.&quot;)[
-
-Soon (link-reveal:&quot;you will fall into it!&quot;)[
-
-Quickly you take the pyramid from your bag. 
-You jam one edge into the crack between the floor and the wall- perhaps it will work as (link-reveal:&quot;a wedge?&quot;)[
-
-With a groan and a creak the floor stops moving. 
-Now (link-reveal:&quot;you must escape. &quot;)[
-
-Barkimedes spots a way out. 
-He grabs a loose plank in the door with his jaws and pulls it free. 
-You both [[crawl through the gap-&gt;pg12footprint2]].
-
-There are 366 days in a leap year. How many days are in a normal year?]]]]]]</tw-passagedata><tw-passagedata pid="98" name="pg43footprint" tags="" position="1361,2910" size="100,100">There are people in the room. 
-A man and a woman are standing.
-A second man is tied up in a chair.
-The (link-reveal:&quot;two men look identical!&quot;)[
-
-At first the standing man and woman looked shocked. 
-Then (link-reveal:&quot;the man tries to smile.&quot;)[
-
-&quot;Thank goodness you&#39;re here!&quot; he says. &quot;I am the owner of the Mansion and this is my wife. 
-We caught the burglar and tied him up. 
-He is my butler. 
-He has disguised himself to look like me.&quot;
-
-The woman smiles, she has a gap in her teeth! 
-&quot;That&#39;s right,&quot; she says. &quot;He was about to get away. 
-If you guard him, we&#39;ll fetch the police!&quot;
-
-Then the man in the chair speaks &quot;Don&#39;t listen to them,&quot; he says. &quot;I&#39;m the owner of the Mansion. 
-I&#39;ve been leaving you notes. 
-These criminals are *my* butler and cook!&quot;
-[[Who should you believe?-&gt;pg43footprint2]]]]</tw-passagedata><tw-passagedata pid="99" name="pg12footprint2" tags="" position="1511,3060" size="100,100">You are back on the staircase.
-There is a door in the opposite wall.
-Stepping up one step, you take a deep breath and open the door.
-
-You [[follow-&gt;pg43footprint]] Barkimedes into the room, he appears a little nervous.</tw-passagedata><tw-passagedata pid="100" name="pg43footprint2" tags="" position="1361,3060" size="100,100">Then you (link-reveal:&quot;remember the clues you have collected along the way.&quot;)[
-
-You ask the two men to hold out a hand and to take off a shoe.
-
-This is what you see...
+(t8n:&quot;slide-up&quot;)[The plaque swings up from the wall.
+Behind it you see a (link-reveal:&quot;hole.&quot;)[
+Inside the hole is a Roman key.
+It&#39;s the key you need to unlock the iron gate!
 
 &lt;img
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg43footprint.png&quot;&gt;
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg14knight.png&quot;&gt;
 
-You think the [[standing man-&gt;pg20key]] is telling the truth.
-You think the [[sitting man-&gt;pg32vase]] is telling the truth.]</tw-passagedata><tw-passagedata pid="101" name="pg20key" tags="" position="1286,3210" size="100,100">You start to tell the man and woman to call the police, but Barkimedes barks fiercely. 
-(link-reveal:&quot;The man and the woman back into a corner.&quot;)[
+Your code word is &quot;(text-colour:yellow)[ROMAN]&quot;.
 
-(link-reveal:&quot;Looking again at the clues.&quot;)[
+You put the key in your bag, jump down from the mosaic and race back to the entrance hall to [[follow the sign to another part of the Museum-&gt;pg17knight]].]]]
+</tw-passagedata><tw-passagedata pid="36" name="pg32wing" tags="" position="2599,623" size="100,100">You look around at the axes on display. 
+They are labelled with their weights in grams.
 
-The man who is standing has a missing button and a (link-reveal:&quot;scar on his hand.&quot;)[
+*Axe A four thousand, nine hundred and ninety.
+Axe B five thousand and one.*
 
-And you remember (link-reveal:&quot;the pattern on his shoe matches the one in the flour.&quot;)[
+You think that [[axe A-&gt;pg6vase]] is heaviest.
+You think that [[axe B-&gt;pg38wing]] is heaviest.
+</tw-passagedata><tw-passagedata pid="37" name="pg6vase" tags="" position="2524,765" size="100,100">You grasp (link-reveal:&quot;axe A.&quot;)[
+(t8n:&quot;rumble&quot;)[The handle starts to shake,]
 
-Hmmmm that bread with the bite mark, you inspect the piece of bread in your bag. 
-It matches the gap that the woman has in her teeth too.
+The axe flies from you hand.
 
-[[Who is telling the truth?-&gt;pg32vase]]]]]]</tw-passagedata><tw-passagedata pid="102" name="pg32vase" tags="" position="1436,3210" size="100,100">(link-reveal:&quot;The clues confirm the truth! &quot;)[
+Its blade just missed your head and buries itself in the wall.
 
-The burglars have captured the owner and tied him up! A
-s Barkimedes stands guard over the two criminals (link-reveal:&quot;you untie the prisoner.&quot;)[
+It&#39;s the wrong one!
 
-The owner explains (link-reveal:&quot;the burglars&#39; plot. &quot;)[
+The digit on the left of a number has the highest place value. 
+The table below shows that the number 4999 has more hundreds, tens and units than 5001, but [[5001 has more thousands, so it is bigger-&gt;pg32wing]].]
+</tw-passagedata><tw-passagedata pid="38" name="pg38wing" tags="" position="2674,765" size="100,100">It&#39;s the right axe!
+On the axe-head you see an instruction...
 
-The butler and the cook were going to keep him prisoner in the cellar. 
-The butler could pretend to be him when the police came. 
+[[*Take me abord the Viking ship*-&gt;pg18mask]]
+</tw-passagedata><tw-passagedata pid="39" name="pg18mask" tags="" position="2674,915" size="100,100">You climb aboard the (link-reveal:&quot;ship.&quot;)[
 
-After the police had failed to solve the crime, the criminals would take the painting and jewellery from their hiding places and make their getaway!
+There is a torn sheet of paper printed to one of the ropes - it&#39;s the next (link-reveal:&quot;instruction!&quot;)[
 
-Now it&#39;s the criminals turn to be [[tied up-&gt;pg24gem]].]]]</tw-passagedata><tw-passagedata pid="103" name="pg24gem" tags="" position="1436,3364" size="100,100">While you phone the police station and gather the stolen goods as evidence, the owner leads the butler and the cook into the Grand Hall and ties them to two chairs.
+*Use the axe to cut a rope.
+The number of the rope to pick 
+is a multiple of 1, 2, 3, 4 and 6.*
 
-Barkimedes growls at them angrily - they are too scared of him to try and escape!
+There are 20 ropes altogether. 
+But (link-reveal:&quot;which is the right one?&quot;)[
 
-The owner smiles when he sees (link-reveal:&quot;his belongings safe and sound.&quot;)[
+You cut [[rope 12-&gt;pg31coins]].
+You cut [[rope 18-&gt;pg41knight]].]]]
+</tw-passagedata><tw-passagedata pid="40" name="pg31coins" tags="" position="2599,1065" size="100,100">It&#39;s the (link-reveal:&quot;right rope!&quot;)[
 
-&quot;I can&#39;t thank you enough,&quot; he says. &quot;Some of these things have been in my family for generations - they are &quot;priceless to me.&quot;
+Rope 12 goes to the top of the ship&#39;s mast.
 
-Barkimedes barks happily and wags his tail. You crouch down to pat him on the head.
-You say &quot;I&#39;m not the only one to thank, I couldn&#39;t have done it without Barkimedes.&quot;
+It is holding something up there.
+
+You  cut the rope and, as if by magic, all of the ropes fall away and a strange object slides down the (link-reveal:&quot;mast.&quot;)[
+
+(t8n:&quot;slide-down&quot;)[It&#39;s a huge horn.]
+
+The Vikings blew the horn to [[warn of their approach-&gt;pg10bird]].]]
+</tw-passagedata><tw-passagedata pid="41" name="pg41knight" tags="" position="2749,1065" size="100,100">You cut the rope 18, but (link-reveal:&quot;it&#39;s the wrong one! &quot;)[
+
+The sail falls on top of you. 
+Ropes wrap around your arms and legs. 
+You are (link-reveal:&quot;trapped!&quot;)[
+
+Then you feel something pulling at the ropes with sharp teeth and claws - suddenly you are [[free again-&gt;pg18mask]]!
+
+Twelve is a multiple of 1, 2, 3, 4 and 6.
+Eighteen is a multiple of 1, 2, 3 and 6, but not of 4.
+All multiples of 4 are given by the 4 times table: 4, 8, 12, 16, 20 and so on.
+Eighteen is not in this sequence.]]
+</tw-passagedata><tw-passagedata pid="42" name="pg10bird" tags="" position="2599,1215" size="100,100">You see a (link-reveal:&quot;message carved on the horn...&quot;)[
+*Blow me carefully for a sign,
+Blow me exactly three squared times.*
+You blow the horn [[6 times-&gt;pg42bird]].
+You blow the horn [[9 times-&gt;pg12coins]].]
+</tw-passagedata><tw-passagedata pid="43" name="pg42bird" tags="" position="2524,1365" size="100,100">You blow the horn 6 times and (link-reveal:&quot;wait.&quot;)[
+At first (link-reveal:&quot;nothing happens. &quot;)[
+
+(t8n:&quot;shudder&quot;)[Then the boat starts to rock wildly. ]
+
+Its a (link-reveal:&quot;storm!&quot;)[
+
+Lightning flashes and you dive for cover - (link-reveal:&quot;just in time.&quot;)[
+
+A giant wave crashes over the boat. 
+If the wave had caught you, you would have been washed away.
+
+You blew the wrong number!
+
+To square a number, you must multiply it by itself. 
+[[What is 3 x 3?-&gt;pg10bird]]]]]]
+</tw-passagedata><tw-passagedata pid="44" name="pg12coins" tags="" position="2674,1365" size="100,100">You blew the (link-reveal:&quot;correct number!&quot;)[
+
+You see a flicker of light from an oil lamp at the front of the boat, where a carving of a wolf&#39;s head stands.
+
+You [[climb forward-&gt;pg39mask]] to get a closer look.]
+</tw-passagedata><tw-passagedata pid="45" name="pg39mask" tags="" position="2674,1515" size="100,100">The flickering light shines on a small card that is inside the wolf&#39;s mouth. 
+It&#39;s another (link-reveal:&quot;instruction!&quot;)[
+
+*Count the wolf&#39;s teeth one by one,
+Tap the number when you&#39;re done.
+If you&#39;re right he&#39;ll lead you on,
+If you&#39;re wrong, he&#39;ll see you gone.
+
+The number of the wolf&#39;s teeth is a factor of 20.*
+
+You think the wolf could have [[10 teeth-&gt;pg19coins]].
+You think the wolf could have [[12 teeth-&gt;pg43vase]].]
+</tw-passagedata><tw-passagedata pid="46" name="pg19coins" tags="" position="2599,1665" size="100,100">You are (link-reveal:&quot;correct!&quot;)[
+You tap 10 times.
+
+The wolf&#39;s (text-colour:red)[eyes] glow bright red.
+
+The lights shine like two laser beams onto (link-reveal:&quot;an object in the distance.&quot;)[
+
+It&#39;s a huge iron cooking pot like a witches&#39; cauldron.
+
+You climb down from the boat and [[walk up to the pot-&gt;pg26mask]].]]
+</tw-passagedata><tw-passagedata pid="47" name="pg43vase" tags="" position="2749,1665" size="100,100">You tapped the (link-reveal:&quot;wrong number!&quot;)[
+
+(link-reveal:&quot;The wolf comes to life!&quot;)[
+
+It turns toward you, fangs bared. 
+(link-reveal:&quot;It&#39;s going to bite!&quot;)[
+
+Just then something leaps from the mast and knocks you to the deck, just out of the wolf&#39;s reach.
+
+A factor of a number divides into that number a whole number of times [[without any remainder-&gt;pg39mask]].
+10 is a factor of 20, but 12 is not.]]]
+</tw-passagedata><tw-passagedata pid="48" name="pg26mask" tags="" position="2599,1815" size="100,100">There is an inscription around the top of the (link-reveal:&quot;pot...&quot;)[
+
+*Thousands, hundreds, tens and units. 
+Find the biggest number to open the burial mound.*
+
+Look - there&#39;s something inside the (link-reveal:&quot;pot. &quot;)[
+
+You reach inside and pull out four beads. 
+
+Each bead had a digit scratched on it.
+
+5,      6,      1,      7
+
+You think that the beads are the thousands, hundreds, tens and units the inscription refers to. 
+But (link-reveal:&quot;which is which? &quot;)[
+
+You need the biggest number, so you order the beads to make the biggest number possible.
+
+The biggest number is [[7615-&gt;pg5bird]].
+The biggest number is [[7651-&gt;pg35vase]].]]]
+
+</tw-passagedata><tw-passagedata pid="49" name="pg5bird" tags="" position="2524,1965" size="100,100">No, this is (link-reveal:&quot;not the biggest number. &quot;)[
+
+You will fail to enter the burial mound with this number.
+
+The digits in a number are highest in value on the left, and lowest on the right. 
+Both numbers have 7 thousands and 6 hundreds. 
+The tens are the next most valuable place. 
+
+[[Which number has more tens?-&gt;pg26mask]]]
+</tw-passagedata><tw-passagedata pid="50" name="pg35vase" tags="" position="2674,1965" size="100,100">Yes! (link-reveal:&quot;This is correct.&quot;)[
+
+Now you know the number you are prepared for the next challenge.
+
+Remember, the number is 7651, you might want to [[write it down.-&gt;pg14vase]]]
+</tw-passagedata><tw-passagedata pid="51" name="pg14vase" tags="" position="2674,2121.6666666666665" size="100,100">You made the (link-reveal:&quot;right choice!&quot;)[
+
+Now, the message on the cooking pot says something about a burial mound.
+You look around. 
+(link-reveal:&quot;There it is! &quot;)[
+
+Next to the Viking ship there is a life-size model of the (link-reveal:&quot;mound. &quot;)[
+Visitors can go inside the see how the Viking treasure was found.
+
+You walk to the (link-reveal:&quot;entrance.&quot;)[ 
+After all that has happened you (link-reveal:&quot;feel nervous.&quot;)[
+
+Then you hear a &#39;meow&#39; sound. 
+It gives you confidence to go on.
+The entrance to the mound is blocked by a wooden door with two labelled handles and a sign with instructions. 
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg14vase.png&quot;&gt;
+
+*Round the number from the cooking pot to the nearest hundred. 
+That&#39;s the handle you must turn.&quot;
+
+You read the sign carefully and then decide which handle you should turn.
+
+You turn [[handle 7700-&gt;pg19wing]].
+You turn [[handle 7600-&gt;pg41coins]].]]]]]
+</tw-passagedata><tw-passagedata pid="52" name="pg19wing" tags="" position="2598.333333333333,2262.3333333333335" size="100,100">You&#39;ve chosen the (link-reveal:&quot;right number.&quot;)[
+
+7651 is closer to 7700 than to 7600 (the &#39;tens&#39; digit is 5 or more) so you round up the hundreds digit.
+
+The door swings (link-reveal:&quot;open.&quot;)[
+
+You step bravely [[forwards-&gt;pg30wing]].]]</tw-passagedata><tw-passagedata pid="53" name="pg41coins" tags="" position="2749,2265" size="100,100">The handle (link-reveal:&quot;will not turn.&quot;)[
+
+You&#39;ve chosen the (link-reveal:&quot;wrong number!&quot;)[
+
+From behind the door, you hear the sound of a Viking horn and (link-reveal:&quot;running feet.&quot;)[
+
+Luckily you duck behind the cooking (link-reveal:&quot;pot. &quot;)[
+
+The door bursts open and a fierce Viking ghost rushes out, waving his sword. 
+He charges across the room and disappears into the Viking ship. 
+
+The door slams behind (link-reveal:&quot;him.&quot;)[
+
+To round 7651 to the nearest hundred, look at the &#39;tens&#39; digit. 
+Is it 5 or more? 
+If it is then round up the hundred&#39;s [[digit-&gt;pg14vase2]].]]]]]
+</tw-passagedata><tw-passagedata pid="54" name="pg30wing" tags="" position="2599,2427" size="100,100">Inside the mound the displays are brightly lit.
+
+Dummies dressed as Vikings stand around the body of the Viking chief.
+
+A voice from a loudspeaker tells the story of the (link-reveal:&quot;burial.&quot;)[
+
+Wait a minute, what is the voice saying (link-reveal:&quot;now? &quot;)[
+It seems to be talking to you!
+
+*Look behind a Viking shied,
+find the shield that&#39;s 0.6 red.
+Six tenths in other words.*
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg30wing.png&quot;&gt;
+
+You look at the shields the Vikings carry. 
+They are all painted (text-colour:red)[red] and (text-colour:blue)[blue].
+Which one should you choose?
+You chose [[shield B-&gt;pg10knight]].
+You chose [[shield C-&gt;pg33vase]].]]</tw-passagedata><tw-passagedata pid="55" name="pg29coins" tags="" position="3688.333333333333,1655.3333333333335" size="100,100">You hold the clay tablet up to the (link-reveal:&quot;mirror. &quot;)[
+Its message becomes (link-reveal:&quot;clear...&quot;)[
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg15mask.png&quot;&gt;
+
+Now you know the (link-reveal:&quot;sequence!&quot;)[
+
+You press the (text-colour:black)+(background:blue)[blue] (link-reveal:&quot;button.&quot;)[
+The shutters descend and the burglars are trapped. 
+
+You press the (text-colour:black)+(background:white)[black] (link-reveal:&quot;button.&quot;)[
+The sound of drilling stops - the Hoard is safe! 
+
+Finally, you press the (text-colour:black)+(background:red)[red] (link-reveal:&quot;button.&quot;)[
+The alarm goes (link-reveal:&quot;off. &quot;)[
+
+The [[police-&gt;pg24coins]] are on their way.]]]]]]]
+</tw-passagedata><tw-passagedata pid="56" name="pg24coins" tags="" position="3716.333333333333,3605.3333333333335" size="100,100">The police storm in and (link-reveal:&quot;arrest the burglars. &quot;)[
+
+The Golden Hoard is (link-reveal:&quot;safe!&quot;)[
+
+The chief of police pats you on the back and smiles.
+
+&quot;Congratulations,&quot; he says. &quot;(link-reveal:&quot;You&#39;re a hero!&quot;)[&quot;
+
+Maybe he&#39;s right, but suddenly you feel very sleepy. 
+
+It has been a tiring adventure! 
+
+You can&#39;t wait to collapse into a chair with Pythagorpuss on your (link-reveal:&quot;lap.&quot;)[
 
 (link-reveal:&quot;THE END&quot;)[
 
-Your final code word is &quot;STOLEN&quot;
-Keep this word [[safe-&gt;theend]].]]</tw-passagedata><tw-passagedata pid="104" name="pg15vase1" tags="" position="664,568" size="100,100">&lt;img 
-src=&quot;https://789stories.files.wordpress.com/2021/01/pg15vase.png&quot;&gt;
-You see suspicious footprints on the floor. 
-They lead off in four directions. 
+Your Code Word is &quot;(text-colour:yellow)[PYTHAGORPUSS]&quot;
+[[Keep this word safe-&gt;theend]].]]]]]</tw-passagedata><tw-passagedata pid="57" name="pg7bird" tags="" position="1647,825" size="100,100">The passage ahead is blocked by a life-size model of a knight with his sword raised. 
 
-Where should you investigate? 
+(link-reveal:&quot;He looks scary&quot;)[
 
-Then you hear a (cycling-link:&quot;floorboard creak&quot;,&quot;muffled cough&quot;,&quot;door opening&quot;,&quot;footsteps&quot;). 
-The sound came from the [[top of the stairs!-&gt;pg15vase]]</tw-passagedata><tw-passagedata pid="105" name="pg9vasex" tags="" position="366,1440" size="100,100">&lt;img 
-src=&quot;https://789stories.files.wordpress.com/2020/04/mansion-of-mazes1-1-1.png&quot;&gt;
-The patterns are triangles!
+But it is only a model, (link-reveal:&quot;isn&#39;t it?&quot;)[
 
-Which shape is the equilateral triangle?
+On the wall above the knight there is a display of shields.
+There are more than 40 altogether.
+And there is something written on the 1st shield(link-reveal:&quot;...&quot;)[
 
-[[Triangle A is equilateral-&gt;pg38footprint]].
-[[Triangle B is equilateral-&gt;pg39key]].</tw-passagedata><tw-passagedata pid="106" name="pg27vase2" tags="" position="592,1664" size="100,100">You chose a shape with eight sides - that&#39;s an octagon.
+*In this gallery you must find,
+Iron gloves and a disc that shines.
+You must seek the dragon’s lair,
+The things you need are hidden there.*
 
-How many sides does a [[hexagon-&gt;pg17key2]] have?</tw-passagedata><tw-passagedata pid="107" name="pg17key2" tags="" position="591,1779" size="100,100">*Dear Detective,
-The next clue is at the centre of a hexagon.
-Your friend.*
+Iron gloves and a shiny disc? 
+[[Where could they be?-&gt;pg33coins]]]]]
+</tw-passagedata><tw-passagedata pid="58" name="pg33coins" tags="" position="1647,983" size="100,100">You glance at the 2nd shield and see another message.
+(link-reveal:&quot;It&#39;s an instruction...&quot;)[
 
-&lt;img 
-src=&quot;https://789stories.files.wordpress.com/2020/04/pg17key.png&quot;&gt;
+*Lift the shield half-way between 25 and 31.
+But beware if you are wrong, you will need some armour on!*
 
-[[Stone A-&gt;pg7candle]] is at the centre of a hexagon.
-[[Stone B-&gt;pg27vase]] is at the centre of a hexagon.</tw-passagedata><tw-passagedata pid="108" name="pg36bfootprint" tags="" position="783,3393" size="100,100">Then your torch shines on two large objects against the wall. 
+You lift [[shield 29-&gt;pg37knight]].
+You lift [[shield 28-&gt;pg12bird]].
+
+[Hint: Write the whole numbers from 25 to 31 and discover which one is at the middle.]]
+
+</tw-passagedata><tw-passagedata pid="59" name="pg37knight" tags="" position="1572,1125" size="100,100">You&#39;ve chosen the (link-reveal:&quot;wrong shield!&quot;)[
+
+The knight in armour walks towards you (link-reveal:&quot;swinging his sword. &quot;)[
+
+But then a ball of fur flashes between his legs. 
+
+He trips and (link-reveal:&quot;crashes to the floor. &quot;)[
+
+You should have chosen the [[28th shield-&gt;pg33coins]].
+
+This number line shows that 28 is halfway between 25 and 31.
+
+25---26---27---28---29---30---31]]]
+</tw-passagedata><tw-passagedata pid="60" name="pg12bird" tags="" position="1722,1124" size="100,100">(link-reveal:&quot;It&#39;s the right shield!&quot;)[
+
+Underneath there is a folder piece of paper.
+It&#39;s a map of the gallery.
+
 &lt;img
-src=&quot;https://789stories.files.wordpress.com/2021/01/pg36footprint-copy.jpg&quot;&gt;
-They are Egyptian mummy cases! 
-Egyptian mummies were placed inside them in the pyramids.
-You (link-reveal:&quot;walk over to the mummy cases.&quot;)[
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg12bird.png&quot;&gt;
+KEY
+1 Armour
+2 Church Bells
+3 Round Table
+4 Sields
+5 Archery
+6 Legends
+7 Jewellery
+8 Swords
+9 The Stocks
 
-They have strange symbols on the front.
-You recognise the symbols! 
-They are mathematical nets. 
-If you draw them on card, you can cut them out and fold them to make 3-Dimensional shapes! 
+But (link-reveal:&quot;where is the dragon&#39;s lair?&quot;)[
+It&#39;s not shown in the key.
+You turn the map (link-reveal:&quot;over.&quot;)[
+There is another clue on the (link-reveal:&quot;back.&quot;)[
 
-One of the strange symbols must be the net for a pyramid. 
-That&#39;s the one you need.
+*To find the next place in your quest, 
+visit the highest prime in the list.*
 
-You chose the [[red mummy-&gt;pg14footprint]] case.
-You chose the [[blue mummy-&gt;pg33portrait]] case.]</tw-passagedata><tw-passagedata pid="109" name="theend" tags="" position="1436,3526" size="100,100">(enchant:?page,(text-colour:black)+(background:white))
-Congratulations for successfully completing the Mansion of Mysteries!
+You decide to visit [[Exhibit 7-&gt;pg23mask]].
+You decide to visit [[Exhibit 9-&gt;pg41mask]].]]]]
+</tw-passagedata><tw-passagedata pid="61" name="pg23mask" tags="" position="1647,1275" size="100,100">You follow the map to (link-reveal:&quot;Exhibit 7.&quot;)[
+You were correct, 7 is the highest prime number between 1 and 9.
+(9 is not a prime number because it has more than 2 factors.)
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg23mask.png&quot;&gt;
+
+
+The cabinet at Exhibit 7 contains a beautiful, beaded necklace. Something is written on the (link-reveal:&quot;glass...&quot;)[
+
+*To find a number you will need,
+You must count every bead.
+Then add the digits one by one,
+That&#39;s the place you must run.*
+
+But there are hundreds of beads in the necklace!
+You do not have time to count them all - the burglars are getting close to the (link-reveal:&quot;hoard!&quot;)[
+But then you spot a printed card...
+
+*Necklace made with 10 blue beads for each red bead.
+Number of red beads = 22.*
+
+Now you can work out the number!
+
+You calculate the number of beads is [[222-&gt;pg37mask]].
+You calculate the number of beads is [[242-&gt;pg9vase]].]]]
+</tw-passagedata><tw-passagedata pid="62" name="pg41mask" tags="" position="1797,1275" size="100,100">You follow the map to Exhibit 9, (link-reveal:&quot;&#39;The Stocks&#39;.&quot;)[
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg42mask.png&quot;&gt;
+
+You can&#39;t see a clue, so you examine the stocks (link-reveal:&quot;carefully. &quot;)[
+
+As you lean over, the (link-reveal:&quot;stocks snap shut. &quot;)[
+trapping your (link-reveal:&quot;neck and wrists.&quot;)[
+
+You might (link-reveal:&quot;never escape!&quot;)[
+
+Then something soft touches your ear. 
+
+You hear a scratching, and the stocks open. 
+
+Someone has released you, but who was it?
+
+A prime number has exactly two factors, 1 and itself. The number 9 can be divided by 3, so it is [[not a prime number-&gt;pg12bird2]].]]]]]
+
+</tw-passagedata><tw-passagedata pid="63" name="pg37mask" tags="" position="1572,1425" size="100,100">You think there are 222 beads in the necklace.
+
+The clue told you to add the digits together. 2 + 2 + 2 = 6. 
+You think you must go to Exhibit 6, &#39;Legends&#39;.
+
+The exhibit looks like the mouth of a cave.
+
+You feel (link-reveal:&quot;afraid.&quot;)[
+
+You can smell sulphur fumes.
+
+Huge (text-colour:yellow)[yellow eyes] are watching you from the darkness!
+
+Suddenly a (text-colour:red)[tongue of flame] explodes towards you - (link-reveal:&quot;it&#39;s a dragon! &quot;)[
+
+You (link-reveal:&quot;run for cover. &quot;)[
+
+You have found the dragon&#39;s lair, but you can&#39;t get close.
+
+Your answer to the last clue was wrong!
+
+There are 22 red beads and so there are 220 blue beads.
+[[How many beads are there altogether-&gt;pg23mask2]]?]]]
+</tw-passagedata><tw-passagedata pid="64" name="pg9vase" tags="" position="1722,1425" size="100,100">That&#39;s (link-reveal:&quot;correct! &quot;)[
+
+There are 242 beads in the necklace.
+
+The clue told you to add the digits together. 2 + 4 + 2 = 8. 
+That&#39;s where you go, (link-reveal:&quot;Exhibit 8, &#39;Swords&#39;.&quot;)[
+
+There are three swords in a dusty cabinet. 
+The dates when the swords were made are printed on display cards.
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg9vase.png&quot;&gt;
+
+Someone has written (link-reveal:&quot;a message in the dust.&quot;)[
+
+*Take the oldest sword with you, 
+It will show you what to do.*
+
+You choose [[sword A-&gt;pg23vase]].
+You choose [[sword B-&gt;pg13wing]].
+You choose [[sword C-&gt;pg23vase]].]]]
+</tw-passagedata><tw-passagedata pid="65" name="pg23vase" tags="" position="1647,1575" size="100,100">As you reach for the sword a loud &#39;meow makes you jump back. 
+
+The sword (link-reveal:&quot;topples. &quot;)[
+
+Its point sticks in the ground, just where you had been standing. 
+
+It was the (link-reveal:&quot;wrong sword!&quot;)[
+
+The oldest sword will have the [[smallest number-&gt;pg9vase2]] for its date.]]
+</tw-passagedata><tw-passagedata pid="66" name="pg13wing" tags="" position="1797,1575" size="100,100">As you reach for the sword it (link-reveal:&quot;jumps into your hand!&quot;)[
+
+It&#39;s the right one!
+
+In the cabinet, you now notice a silk scarf folded where the sword stood.
+
+Stitched into the cloth you find a (link-reveal:&quot;message...&quot;)[
+
+*To draw the dragon from his lair,
+Ring the bell that is not square,
+Then place the arrow in a bow,
+And he will take you down below.*
+
+So you must ring a bell.
+
+With the sword in your hand, you head for Exhibit 2, [[Church Bells-&gt;pg17wing]].]]
+
+</tw-passagedata><tw-passagedata pid="67" name="pg17wing" tags="" position="1797,1725" size="100,100">There is a row of ancient bells at the exhibit. 
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg17wing.png&quot;&gt;
+
+But which one should you ring(link-reveal:&quot;?&quot;)[
+
+None of the bells are square - they are bell shaped. 
+
+Then you see the (link-reveal:&quot;numbers printed on the bells.&quot;)[
+The clue meant to ring a bell that isn&#39;t a square number!
+(link-reveal:&quot;Which bell isn&#39;t a square number?&quot;)[
+
+You decide to ring [[bell 32-&gt;pg36bird]].
+You decide to ring [[bell 36-&gt;pg33mask]].]]]
+</tw-passagedata><tw-passagedata pid="68" name="pg36bird" tags="" position="1723,1874" size="100,100">You strike the bell with the (link-reveal:&quot;sword.&quot;)[
+
+It rings out (link-reveal:&quot;loudly. &quot;)[
+
+It&#39;s the right bell - (link-reveal:&quot;32 is not a square number.&quot;)[
+
+A huge head emerges slowly from the cave mouth at the (link-reveal:&quot;Exhibit of Legends.&quot;)[
+
+The dragon is looking straight at you! 
+
+Now you (link-reveal:&quot;need a bow and arrow. &quot;)[
+
+You race to Exhibit 5 [[&#39;Archery&#39;-&gt;pg13knight]].]]]]]
+</tw-passagedata><tw-passagedata pid="69" name="pg33mask" tags="" position="1872,1875" size="100,100">You strike the bell with the sword. 
+It does not ring - it is cracked!
+Out from the crack slides a (text-colour:red)[brightly] (text-colour:lime)[coloured] (text-colour:green)[snake].
+
+It&#39;s going to bite your (link-reveal:&quot;foot!&quot;)[
+
+Then, like a flash, something furry pounces on the snake&#39;s tail. 
+
+The snake slithers back inside the bell.
+
+You chose the wrong bell!
+
+6 x 6 = 36.
+Therefore 36 is a [[square number-&gt;pg17wing]] because a square number is the product of two identical integers.]
+</tw-passagedata><tw-passagedata pid="70" name="pg13knight" tags="" position="1722,2025" size="100,100">There is a bow and a display of arrows at the exhibit.
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg13arrows.png&quot;&gt;
+
+Each arrow is numbered.
+But which should you use?
+
+Then you see an instruction pinned to the (link-reveal:&quot;target...&quot;)[
+
+*Choose the arrow that is the smallest multiple of 2, 3 and 5.*
+
+You choose [[arrow 20-&gt;pg5knight]].
+You choose [[arrow 30-&gt;pg42knight]].]
+</tw-passagedata><tw-passagedata pid="71" name="pg5knight" tags="" position="1647,2175" size="100,100">You put the arrow to the bow and point it at the (link-reveal:&quot;dragon.&quot;)[
+
+But it&#39;s not scared.
+
+You fire the arrow, but it just bounces off the dragon&#39;s body.
+
+It was the wrong arrow!
+
+20 is a multiple of 2 and 5, but not a multiple of 3.
+
+Quickly - [[choose another arrow-&gt;pg13knight]], before it&#39;s too late!]
+
+</tw-passagedata><tw-passagedata pid="72" name="pg42knight" tags="" position="1797,2175" size="100,100">You put the arrow to the bow and point it at the (link-reveal:&quot;dragon. &quot;)[
+
+The dragon lowers its head and turns (link-reveal:&quot;back into the cave. &quot;)[
+
+You chose the right arrow!
+
+You [[follow the dragon-&gt;pg21coins]] into its lair.]]</tw-passagedata><tw-passagedata pid="73" name="pg21coins" tags="" position="1798,2325" size="100,100">The dragon curls up in a corner a watches suspiciously as you (link-reveal:&quot;explore.&quot;)[
+
+At the back of the cave you find a (link-reveal:&quot;trapdoor. &quot;)[
+*&#39;Look beneath the dragon&#39;s lair...&#39;* - this must be it!
+
+There is an iron handle on the trapdoor, but it will (link-reveal:&quot;not budge.&quot;)[
+Then you see another clue carved into the (link-reveal:&quot;wood...&quot;)[
+
+*I am 56.
+Halve me, Halve me again, and once more.
+What do you find?
+Turn my handle that number of times.*
+
+You turn the handle [[6 times-&gt;pg40coins]].
+You turn the handle [[7 times -&gt;pg40bird]].]]]]</tw-passagedata><tw-passagedata pid="74" name="pg40coins" tags="" position="1722,2475" size="100,100">You turn the handle 6 times, but the trapdoor is still (link-reveal:&quot;shut!&quot;)[
+
+Half of 58 is 28. 
+Half of 28 is 14. 
+What is half of 14?
+
+Quickly, [[try again-&gt;pg21coins2]] before the dragon gets restless!]
+</tw-passagedata><tw-passagedata pid="75" name="pg40bird" tags="" position="1872,2475" size="100,100">You turn the handle 7 times and (link-reveal:&quot;pull.&quot;)[
+
+It&#39;s the right number!
+
+The trapdoor swings (link-reveal:&quot;open.&quot;)[
+
+Inside there is a round mirror made of gold - a disc that shines!
+It&#39;s fit for a princess.
+You (link-reveal:&quot;put the mirror in your bag.&quot;)[
+Pinned to the underside of the trapdoor you find a page from an ancient book...
+
+*Now you&#39;ve found the disc that shines,
+Do not waste your precious time.
+The gloves you need can be found,
+Where the Knights all sit around.*
+
+Where do the Knights (link-reveal:&quot;sit around?&quot;)[
+
+Around the round table, of course!
+
+You dash from the dragon&#39;s lair to the [[Round Table Exhibit-&gt;pg4coins]].]]]]
+</tw-passagedata><tw-passagedata pid="76" name="pg4coins" tags="" position="1872,2633" size="100,100">Someone has labelled the round table with numbers. 
+But what do they mean? 
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg4coins.png&quot;&gt;
+
+You search for a (link-reveal:&quot;clue. &quot;)[
+Then you see it. 
+It&#39;s a piece of parchment pinned to a (link-reveal:&quot;knight&#39;s chair...&quot;)[
+
+*The number you need is even.
+It is a multiple of five and a factor of 100.
+Look under the table,
+But choose the right place,
+Or you and danger will come face to face.*
+
+You decide to look under [[number 40-&gt;pg30knight]]
+You decide to look under [[number 50-&gt;pg16bird]]]]
+</tw-passagedata><tw-passagedata pid="77" name="pg30knight" tags="" position="1797,2775" size="100,100">You duck under the table and come face to face with a fierce hunting dog.
+He&#39;s coming to (link-reveal:&quot;attack! &quot;)[
+
+Then a dark shape runs under the table and distracts him.
+
+You make a quick [[exit-&gt;pg4coins]].
+
+You chose the wrong number and nearly paid the price! 
+The number 40 is even and a multiple of 5, but it is not a factor of 100.]
+</tw-passagedata><tw-passagedata pid="78" name="pg16bird" tags="" position="1943,3619" size="100,100">You crawl under the (link-reveal:&quot;table.&quot;)[
+
+A pair of chain-mail gloves lies on the floor.
+(link-reveal:&quot;Iron gloves! &quot;)[
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg16bird.png&quot;&gt;
+
+You&#39;ve chosen the correct number!
+
+You put the gloves (link-reveal:&quot;in your bag.&quot;)[
+
+Your code word is &quot;(text-colour:yellow)[KNIGHT]&quot;.
+
+Then you see a fierce hunting dog with its back to you on the opposite side of the (link-reveal:&quot;table.&quot;)[
+
+You jump back quickly (link-reveal:&quot;before it spots you.&quot;)[
+
+Now you have the things you need.
+
+You [[race to the entrance hall-&gt;pg17knight]] as fast as you can to follow the directions to another part of the Museum.]]]]]
+</tw-passagedata><tw-passagedata pid="79" name="pg27wing" tags="" position="3672.6666666666665,442.3333333333335" size="100,100">You take the Roman key from your bag.
+
+It turns in the lock.
+
+The gate is stiff, and creaks loudly as you open it, but (link-reveal:&quot;you are through.&quot;)[
+
+Someone follows you thought the gate.
+You look down at (link-reveal:&quot;your feet.&quot;)[
+It&#39;s Pythagorpuss, the museum cat!
+He has been helping you all along!
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg27wing.png&quot;&gt;
+
+Now you can face the challenges [[together-&gt;pg19bird]].]]
+</tw-passagedata><tw-passagedata pid="80" name="pg19bird" tags="" position="3675,588.666666666667" size="100,100">Ahead the corridor is blocked is by (link-reveal:&quot;a pile of spiked balls.&quot;)[
+The burglars must have piled them there so they can&#39;t be followed.
+There&#39;s (link-reveal:&quot;no way through!&quot;)[
+
+But look - (link-reveal:&quot;Pythagorpuss sees a way!&quot;)[
+He leaps to the top where there is a gap. But (link-reveal:&quot;you can&#39;t follow.&quot;)[
+The spikes are too sharp.
+They will cut your hands.
+Then you see a message chalked on the (link-reveal:&quot;ground...&quot;)[
+
+*Chain-mail gloves
+will get you up,
+Then you can climb 
+and not be cut.*
+
+Knights wore chain-mail in the Middle Ages!
+
+I have the [[chain-mail gloves-&gt;pg9mask]].
+I don&#39;t have the gloves yet. 
+(Hint - Try the [[Middle Ages Section-&gt;pg17knight]].)]]]]]
+</tw-passagedata><tw-passagedata pid="81" name="pg9mask" tags="" position="3678.333333333333,725.3333333333335" size="100,100">You take the chain-mail gloves from your bag and put them on.
+
+Now you can (link-reveal:&quot;climb safely. &quot;)[
+
+You follow Pythagorpuss over the barrier and [[drop down on the other side-&gt;pg38bird]].]</tw-passagedata><tw-passagedata pid="82" name="pg38bird" tags="" position="3678.333333333333,875.3333333333335" size="100,100">You can hear the sound of drilling (link-reveal:&quot;ahead.&quot;)[
+
+The burglars have raised the steel safety shutters from the exhibition doors.
+
+Now they are breaking into the safe that holds the treasure at (link-reveal:&quot;night. &quot;)[
+
+(link-reveal:&quot;Why has the alarm not gone off?&quot;)[
+
+Pythagorpuss knows what to do. 
+He runs to a door marked &#39;Museum Office.&#39;
+But there is a combination lock on the door. 
+(link-reveal:&quot;You cannot get in!&quot;)[
+
+Then you see a yellow sticky note next to the keypad...
+
+*The combination has been set,
+To the date of the Viking amulet.*
+
+I have found the [[amulet-&gt;pg18vase]].
+I have not found the amulet yet and I need to visit the
+[[Vikings section -&gt;pg17knight]] to find it.]]]]</tw-passagedata><tw-passagedata pid="83" name="pg18vase" tags="" position="3678.333333333333,1025.3333333333335" size="100,100">You take the amulet from your bag. 
+On the back there is a (link-reveal:&quot;label.&quot;)[
+
+*Found in East Anglia, United Kingdom. 
+Date around 879 AD.*
+
+You [[enter the digits 879-&gt;pg43coins]], and the door opens.]</tw-passagedata><tw-passagedata pid="84" name="pg43coins" tags="" position="3678.333333333333,1175.3333333333335" size="100,100">In the office is a set of (link-reveal:&quot;video screens &quot;)[
+on the first you can see the open security (link-reveal:&quot;shutter, &quot;)[
+on the second the burglars are drilling into a giant safe, (link-reveal:&quot;and&quot;)[
+on the third you can see (link-reveal:&quot;inside the safe,&quot;)[
+
+The Golden Hoard is still inside - there is time to (link-reveal:&quot;rescue it!&quot;)[
+
+Below the screens you see a burglar alarm panel - the burglars must have found out (link-reveal:&quot;the code to turn it off. &quot;)[
+
+And on the desk is a panel of three coloured buttons - one (text-colour:black)+(background:red)[red], one (text-colour:black)+(background:white)[black], one (text-colour:black)+(background:blue)[blue].
+
+A label above them says (link-reveal:&quot;&#39;Museum Security&#39;.&quot;)[
+&gt; One button controls the security shutters, 
+&gt; One button turns the power in the exhibition on and off, and
+&gt; One button sets off the alarm.
+
+But which one does [[what-&gt;pg43coins2]]?
+
+]]]]]]]</tw-passagedata><tw-passagedata pid="85" name="pg36wing" tags="" position="2806.666666666667,3243.333333333333" size="100,100">Tiny writing at the centre of the eye reveals the next (link-reveal:&quot;clue...&quot;)[
+
+*I&#39;m 25% (text-colour:green)[green] and 40% (text-colour:red)[red],
+The rest of me is (text-colour:blue)[blue].
+If you think I&#39;m more (text-colour:red)[red] than (text-colour:blue)[blue],
+Find a simple wooden stool.
+If I&#39;m more (text-colour:blue)[blue] than (text-colour:red)[red],
+Lay in a chieftain&#39;s splendid bed.
+
+You know you are now looking for a [[stool-&gt;pg11vase]].
+You know you are now looking for a [[bed-&gt;pg29bird]].]
+</tw-passagedata><tw-passagedata pid="86" name="pg11vase" tags="" position="2731.666666666667,3393.333333333333" size="100,100">You search around for (link-reveal:&quot;a wooden stool. &quot;)[
+
+It&#39;s next to the tiller at the stern! 
+
+That&#39;s where the Viking chieftain sat as he sailed with his crew.
+
+You feel (link-reveal:&quot;underneath the stool.&quot;)[ 
+
+There&#39;s something fixed with a nail. 
+It&#39;s the golden pendant the chieftain wore for luck - his precious amulet!
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg11vase.png&quot;&gt;
+
+You made the [[right choice-&gt;pg39vase]].]]
+</tw-passagedata><tw-passagedata pid="87" name="pg29bird" tags="" position="2881.666666666667,3393.333333333333" size="100,100">You look around for a (link-reveal:&quot;splendid bed. &quot;)[
+It&#39;s not on the ship, but then you see it next to the skeleton. 
+It was buried with the chieftain.
+
+You jump from the ship and (link-reveal:&quot;rush to the bed. &quot;)[
+
+There is nothing on top, so you (link-reveal:&quot;crawl underneath.&quot;)[
+
+But something is (link-reveal:&quot;wrong!&quot;)[
+
+Vines carved in the bed&#39;s legs start to come to life, writing and wrapping around your (link-reveal:&quot;wrists and ankles. &quot;)[
+
+You tear yourself free and escape [[just in time.-&gt;pg36wing]]
+
+You were wrong about the colours.
+The eye is 25% (text-colour:green)[green] and 40% (text-colour:red)[red], that&#39;s 65% for those colours.
+The rest of the eye is (text-colour:blue)[blue].
+100% - 65% = 35%, so the eye is more(text-colour:red)[red] (40%) than (text-colour:blue)[blue] (35%).]]]]]
+</tw-passagedata><tw-passagedata pid="88" name="pg39vase" tags="" position="2732.666666666667,3643.333333333333" size="100,100">Now you have the amulet you can continue your adventure to another part of the Museum. 
+
+Your code word is &quot;(text-colour:yellow)[AMULET]&quot;.
+
+You race back to the [[entrance hall-&gt;pg17knight]] to follow the sign, and someone else is with you!
+
+</tw-passagedata><tw-passagedata pid="89" name="pg10knight" tags="" position="2483,2645" size="100,100">You&#39;ve chosen the (link-reveal:&quot;wrong shield!&quot;)[
+
+The Viking warrior comes to (link-reveal:&quot;life. &quot;)[
+He swings his axe towards you. 
+But you use the shield to block the (link-reveal:&quot;blow.&quot;)[
+
+The warrior crumbles into dust on the ground.
+
+The digit after the decimal point is &#39;tenths&#39;.
+The decimal 0.6 means six tenths or 6/10.
+
+Which shield has ten parts, [[six of which are red-&gt;pg30wing]]?]]]</tw-passagedata><tw-passagedata pid="90" name="pg33vase" tags="" position="2730,2650" size="100,100">It&#39;s the (link-reveal:&quot;right shield!&quot;)[
+
+You lift it down from the dummy and (link-reveal:&quot;turn it over.&quot;)[
+
+Underneath there is a piece torn from an ancient map.
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg33vase.png&quot;&gt;
+
+You don&#39;t know if you will need it, but you put it in your bag.
+
+There&#39;s also a message on the back of the (link-reveal:&quot;shield...&quot;)[
+
+*You are winning
+this dangerous game.
+Now head back from whence you came.
+But look for numbers in a net,
+You&#39;ve yet to find [[the amulet-&gt;pg39coins]]!*]]]</tw-passagedata><tw-passagedata pid="91" name="pg39coins" tags="" position="2730,2800" size="100,100">You retrace your steps to the burial mound door.
+
+Watching for Vikings, you step back into the gallery and head for the door.
+
+But what was that about a (link-reveal:&quot;net?&quot;)[
+
+Then you see it.
+
+There is a [[fishing net-&gt;pg8knight]] hanging over the side of the ship.]</tw-passagedata><tw-passagedata pid="92" name="pg8knight" tags="" position="2730,2950" size="100,100">You walk up to the net to take a closer (link-reveal:&quot;look. &quot;)[
+
+Someone has written numbers on the wood behind. 
+You can see them through the (link-reveal:&quot;holes. &quot;)[
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg8knight.png&quot;&gt;
+
+They make a pattern, but some numbers are missing. 
+What is (link-reveal:&quot;special about them? &quot;)[
+And look - there&#39;s a note printed to the net...
+
+*If the missing numbers are prime,
+Then you must search inside a Viking purse.
+If the missing number are square,
+Then you must spy a Viking&#39;s eye.*
+
+You think the missing numbers are [[all prime numbers-&gt;pg38coins]].
+You think the missing numbers are [[all square numbers-&gt;pg21vase]].]]]</tw-passagedata><tw-passagedata pid="93" name="pg38coins" tags="" position="2655,3100" size="100,100">You look around for a (link-reveal:&quot;Viking purse.&quot;)[
+
+You see it in a cabinet next to the skeleton. 
+
+It&#39;s a leather bag tied at the neck.
+
+You take down the purse, but something feels (link-reveal:&quot;wrong. &quot;)[
+
+Is something moving (link-reveal:&quot;inside? &quot;)[
+
+Carefully you untie the neck but before you can put your hand inside, something crawls (link-reveal:&quot;out. &quot;)[
+
+It&#39;s a (link-reveal:&quot;scorpion!&quot;)[ 
+
+You throw the bag and the scorpion as far away as you can.
+
+You were wrong. 
+The missing numbers are 4, 9, 16, 25, 36, 49, 64.
+They are all [[square numbers-&gt;pg8knight]].]]]]]
+</tw-passagedata><tw-passagedata pid="94" name="pg21vase" tags="" position="2805,3100" size="100,100">Yes - the numbers are all (link-reveal:&quot;square!&quot;)[
+
+A Viking eye - where could that be?
+
+Then you (link-reveal:&quot;see it.&quot;)[
+
+There&#39;s a giant eye shape painted on the ship&#39;s sail. 
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg21vase.png&quot;&gt;
+
+You climb back abord to [[take a closer look-&gt;pg36wing]].]]
+</tw-passagedata><tw-passagedata pid="95" name="pg35wing" tags="" position="3688.333333333333,1507.9999999999995" size="100,100">You take the three items from your bag and lay them on the desk. 
+
+
+You have a golden mirror, 
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg40bird.png&quot;&gt;
+
+a clay table covered with mystery writing 
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg15maskreverse.png&quot;&gt;
+
+and a scrap torn from a map.
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg33vase.png&quot;&gt;
+
+Wait a minute - a map gives you (link-reveal:&quot;directions! &quot;)[
+
+You look more closely at the tiny letters on the scrap. 
+You can only just make out what they say...
+
+*The mystery writing will be clear,
+When you see it in a mirror.*
+
+Now you understand! 
+The writing on the tablet must be [[mirror writing-&gt;pg29coins]] - it&#39;s back to front!]
+</tw-passagedata><tw-passagedata pid="96" name="pg17knight1st" tags="" position="1594,239" size="100,100">You are standing in the main entrance hall.
+
+Four corridors lead in different directions.
+You must choose which one to take.
+
+But (link-reveal:&quot;look!&quot;)[
+
+There are muddy footprints leading down the corridoor to the Golden Hoard.
+You see the flash of a torch.
+That&#39;s where the burglars have gone!
+
+Which part of the Museum will you visit first?
+
+(text-colour:black)+(background:purple)[[[Greeks and Romans-&gt;pg26knight]]]
+
+(text-colour:black)+(background:red)[[[Vikings-&gt;pg34wing]]]
+
+(text-colour:black)+(background:blue)[[[Middle Ages-&gt;pg28knight]]]
+
+(text-colour:black)+(background:yellow)[[[Golden Hoard-&gt;pg20knight]]]]</tw-passagedata><tw-passagedata pid="97" name="pg10wing2nd" tags="" position="964,815" size="100,100">*Choose a vase if you dare,
+Five times five holds the clue,
+But be sure you choose with care,
+If you&#39;re wrong, it&#39;s the end for you!*
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg10wing.png&quot;&gt;
+
+You chose [[vase 24-&gt;pg26vase]].
+You chose [[vase 25-&gt;pg27coins]].</tw-passagedata><tw-passagedata pid="98" name="pg5wing2" tags="" position="1341,2315" size="100,100">&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg5wing.png&quot;&gt;
+
+*Tap my lid with the magic number from my magic square.*
+
+You think the magic number is...
+
+[[10,-&gt;pg37vase]] [[11,-&gt;pg37vase]] [[12,-&gt;pg37vase]] [[13,-&gt;pg37vase]] [[14,-&gt;pg37vase]] [[15,-&gt;pg15mask]] [[16,-&gt;pg37vase]] [[17-&gt;pg37vase]]
+
+You don&#39;t know the magic number and would like a [[hint-&gt;pg37vase]].]]
+</tw-passagedata><tw-passagedata pid="99" name="pg14vase2" tags="" position="2844,2123" size="100,100">You decide again which handle you should turn.
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg14vase.png&quot;&gt;
+
+You turn [[handle 7700-&gt;pg19wing]].
+You turn [[handle 7600-&gt;pg41coins]].</tw-passagedata><tw-passagedata pid="100" name="pg12bird2" tags="" position="1854,1128" size="100,100">*To find the next place in your quest, 
+visit the highest prime in the list.*
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg12bird.png&quot;&gt;
+KEY
+1 Armour
+2 Church Bells
+3 Round Table
+4 Sields
+5 Archery
+6 Legends
+7 Jewellery
+8 Swords
+9 The Stocks
+
+You decide to visit [[Exhibit 7-&gt;pg23mask]].
+You decide to visit [[Exhibit 9-&gt;pg41mask]].</tw-passagedata><tw-passagedata pid="101" name="pg23mask2" tags="" position="1498,1278" size="100,100">You check the a printed card.
+
+*Necklace made with 10 blue beads for each red bead.
+Number of red beads = 22.*
+
+Now you can work out the number!
+
+You calculate the number of beads is [[222-&gt;pg37mask]].
+You calculate the number of beads is [[242-&gt;pg9vase]].
+
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg23mask.png&quot;&gt;
+</tw-passagedata><tw-passagedata pid="102" name="pg9vase2" tags="" position="1851,1425" size="100,100">There are three swords in a dusty cabinet. 
+The dates when the swords were made are printed on display cards.
+&lt;img
+src=&quot;https://789stories.files.wordpress.com/2021/02/pg9vase.png&quot;&gt;
+
+Someone has written a message in the dust.
+
+*Take the oldest sword with you, 
+It will show you what to do.*
+
+You choose [[sword A-&gt;pg23vase]].
+You choose [[sword B-&gt;pg13wing]].
+You choose [[sword C-&gt;pg23vase]].</tw-passagedata><tw-passagedata pid="103" name="pg21coins2" tags="" position="1665,2323" size="100,100">*I am 56.
+Halve me, Halve me again, and once more.
+What do you find?
+Turn my handle that number of times.*
+
+You turn the handle [[6 times-&gt;pg40coins]].
+You turn the handle [[7 times -&gt;pg40bird]].</tw-passagedata><tw-passagedata pid="104" name="pg43coins2" tags="" position="3683.333333333333,1345.9999999999995" size="100,100">You must press the buttons in the (link-reveal:&quot;right order.&quot;)[
+
+If you set off the alarm, or turn off the power, before closing the shutters, the burglars will be warned and escape with the Hoard!
+
+Which button should you (link-reveal:&quot;press first?&quot;)[
+
+Then Pythagorpuss starts pawing at your bag with a loud &#39;meow&#39;! 
+That&#39;s it - the objects you collected!
+
+[[They must hold the clue-&gt;pg35wing]]!]]</tw-passagedata><tw-passagedata pid="105" name="theend" tags="" position="3716.333333333333,3755.3333333333335" size="100,100">(enchant:?page,(text-colour:black)+(background:white))
+Congratulations for successfully completing the Museum of Mazes!
 
 Now send Mrs Jones your four code words to recieve you Certificate of Success.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,i=!1,a=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){i=!0,a=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw a}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
